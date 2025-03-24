@@ -24,9 +24,12 @@ class Tile():
         self.initialize_planets(data)
 
     def get_img(self):
-        self.img = pygame.image.load(f"src/data/tiles/ST_{self._id}.png").convert_alpha()
+        self.orig_img = pygame.image.load(f"src/data/tiles/ST_{self._id}.png").convert_alpha()
 
-        self.img = pygame.transform.scale_by(self.img, self.scale)
+        self.scale_img(self.scale)
+
+    def scale_img(self, factor):
+        self.img = pygame.transform.scale_by(self.orig_img, factor)
         self.rect = self.img.get_rect()
         self.width = self.rect.width//2 + self.spacing
 
@@ -39,10 +42,34 @@ class Tile():
         x = self.width * (3./2 * self.q) + self.offset_x - self.width//2
         y = self.width * (math.sqrt(3)/2 * self.q  +  math.sqrt(3) * self.r) + self.offset_y - self.width//2
         return (x, y)
+    
+    def get_zoomed_tile_position(self, pan_offset, zoom_level, center):
+        """
+        Calculate tile position considering zoom and pan
+        """
+        
+        # Calculate zoomed tile size
+        scaled_tile_size = self.width * zoom_level
+        
+        # Adjust hex grid calculation for zooming
+        x = scaled_tile_size * (3./2 * self.q)
+        y = scaled_tile_size * (math.sqrt(3)/2 * self.q + math.sqrt(3) * self.r)
+        
+        # Center adjustment
+        zoomed_pos = (
+            x + center[0] - scaled_tile_size//2, 
+            y + center[1] - scaled_tile_size//2
+        )
+        
+        # Apply panning
+        pan_vec = pygame.Vector2(pan_offset)
+        final_pos = pygame.Vector2(zoomed_pos) + pan_vec
+        
+        self.draw_pos = final_pos
 
     def draw(self, screen):
         #pygame.draw.circle(screen, (255,0,0), self.get_pixel_position(), self.width / 2)
-        screen.blit(self.img, self.get_pixel_position())
+        screen.blit(self.img, self.draw_pos)
 
     def __str__(self):
         msg = f"System {self._id}\n"

@@ -15,17 +15,19 @@ class Map():
             map_string (str): The string representation of the map, radially generated from https://keeganw.github.io/ti4/
         """
 
-        self.disp = pygame.surface.Surface((1000,1000))
+        self.disp = pygame.surface.Surface((1600,1000), pygame.SRCALPHA)
         self.rect = self.disp.get_rect()
         self.center = self.rect.center
 
         self.tiles = dict() # instant tile lookup
-        self.scale = 0.4
+        self.base_scale = 0.4
         self.spacing = 5
         self.tile_size = 0
 
         self.map_string = list(map(lambda x: int(x), map_string.split(" ")))
 
+        # Preload high-quality tiles
+        self.preloaded_tiles = {}
         self.generate_map()
 
     def generate_map(self):
@@ -44,47 +46,74 @@ class Map():
                 _id = self.map_string[i-1]
 
             if _id != 0: # don't draw empty tiles
-                self.tiles[tile] = Tile(*tile, _id=_id, scale=self.scale, 
-                                        offset=self.center, spacing=self.spacing,
-                                        data=planet_data[str(_id)])
+                # Preload high-quality tile image
+                tile_obj = Tile(*tile, _id=_id, scale=self.base_scale, 
+                                offset=self.center, spacing=self.spacing,
+                                data=planet_data[str(_id)])
+                self.tiles[tile] = tile_obj
 
         # get tile size
         self.tile_size = self.tiles[(0,0,0)].rect.width // 2 + self.spacing
 
-    def pixel_to_tile(self, pos):
-        x, y = pygame.Vector2(pos) - pygame.Vector2(self.center)
-        q = round((2/3*x) / self.tile_size)
-        r = round((-1/3*x + math.sqrt(3)/3*y) / self.tile_size)
+    def pixel_to_tile(self, pos, pan_offset, zoom_level):
+        # Adjust mouse position for panning and zooming
+        adjusted_pos = pygame.Vector2(pos) - pan_offset * zoom_level
+        
+        # Adjust for scaled tile size
+        scaled_tile_size = self.tile_size * zoom_level
+        
+        # Convert to hex coordinates
+        x, y = pygame.Vector2(adjusted_pos) - pygame.Vector2(self.center)
+        q = round((2/3*x) / scaled_tile_size)
+        r = round((-1/3*x + math.sqrt(3)/3*y) / scaled_tile_size)
         s = -(q+r)
 
         if (q,r,s) in self.tiles:
             return self.tiles[(q,r,s)]
         return None
 
-    def update(self, pos):
-        #
-        self.disp.fill((0,0,0))
+    def get_zoomed_tile_position(self, tile, pan_offset, zoom_level):
+        """
+        Calculate tile position considering zoom and pan
+        """
+        
+        # Calculate zoomed tile size
+        scaled_tile_size = self.tile_size * zoom_level
+        
+        # Adjust hex grid calculation for zooming
+        x = scaled_tile_size * (3./2 * tile.q)
+        y = scaled_tile_size * (math.sqrt(3)/2 * tile.q + math.sqrt(3) * tile.r)
+        
+        # Center adjustment
+        zoomed_pos = (
+            x + self.center[0] - scaled_tile_size//2, 
+            y + self.center[1] - scaled_tile_size//2
+        )
+        
+        # Apply panning
+        pan_vec = pygame.Vector2(pan_offset)
+        final_pos = pygame.Vector2(zoomed_pos) + pan_vec
+        
+        return final_pos
 
-        # draw all the tiles
-        for tile in self.tiles.values():
+    def update(self, pos, pan_offset=(0,0), zoom_level=1.0):
+        # Clear the display
+        self.disp.fill((0,0,0,0))  # Clear with transparent black
+
+        # Draw all the tiles with panning and zooming
+        for (q,r,s), tile in self.tiles.items():
+            # Get the zoomed and panned position
+            tile.get_zoomed_tile_position(pan_offset, zoom_level, self.center)
+            
+            # Use high-quality original image and scale
+            tile.scale_img(zoom_level)
             tile.draw(self.disp)
 
-        pygame.draw.circle(self.disp, (255,0,0), self.center, 10)
-
-        # if the mouse is over the game area,
-        if self.rect.collidepoint(pos):
-
-            # nx = 3/2*q * self.tile_size + self.center[0] - self.tile_size/2
-            # ny = (math.sqrt(3)/2 * q + math.sqrt(3)*r) * self.tile_size + self.center[1] - self.tile_size/  2
-
-            # self.disp.blit(self.tiles[(0,0,0)].img, (nx, ny))
-
-            if (tile := self.pixel_to_tile(pos)) != None:
-                print(tile)
+        # Check for hover tile
+        hover_tile = self.pixel_to_tile(pos, pan_offset, zoom_level)
+        
+        return hover_tile
     
     def draw(self, screen):
-        # draw the surface to the screen
+        # Draw the surface to the screen
         screen.blit(self.disp, (0,0))
-        
-
-
