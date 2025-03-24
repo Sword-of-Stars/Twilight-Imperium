@@ -37,10 +37,9 @@ class Tile():
         for planet_data in data["planets"]:
             self.planets.append(Planet(planet_data))
 
-
     def get_pixel_position(self):
-        x = self.width * (3./2 * self.q) + self.offset_x - self.width//2
-        y = self.width * (math.sqrt(3)/2 * self.q  +  math.sqrt(3) * self.r) + self.offset_y - self.width//2
+        x = self.width * (3./2 * self.q) - self.width//2
+        y = self.width * (math.sqrt(3)/2 * self.q  +  math.sqrt(3) * self.r) - self.width//2
         return (x, y)
     
     def get_zoomed_tile_position(self, pan_offset, zoom_level, center):
@@ -48,17 +47,14 @@ class Tile():
         Calculate tile position considering zoom and pan
         """
         
-        # Calculate zoomed tile size
-        scaled_tile_size = self.width * zoom_level
-        
         # Adjust hex grid calculation for zooming
-        x = scaled_tile_size * (3./2 * self.q)
-        y = scaled_tile_size * (math.sqrt(3)/2 * self.q + math.sqrt(3) * self.r)
+        x = self.width * (3./2 * self.q)
+        y = self.width * (math.sqrt(3)/2 * self.q + math.sqrt(3) * self.r)
         
         # Center adjustment
         zoomed_pos = (
-            x + center[0] - scaled_tile_size//2, 
-            y + center[1] - scaled_tile_size//2
+            x + center[0] - self.width//2, 
+            y + center[1] - self.width//2
         )
         
         # Apply panning

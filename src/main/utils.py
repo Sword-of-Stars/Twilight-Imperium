@@ -69,3 +69,21 @@ def generate_concentric_rings(center, max_radius):
         ring = hex_ring(center, r)
         all_rings.append(ring)
     return all_rings
+
+def round_cubic(qf, rf, sf):
+  q = round(qf)
+  r = round(rf)
+  s = round(sf)
+   
+  q_diff = abs(q - qf)
+  r_diff = abs(r - rf)
+  s_diff = abs(s - sf)
+
+  if q_diff > r_diff and q_diff > s_diff:
+      q = -r - s
+  elif r_diff > s_diff:
+      r = -q - s
+  else:
+      s = -q - r
+
+  return (q, r, s)

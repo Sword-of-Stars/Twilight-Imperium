@@ -20,8 +20,8 @@ class Planet():
 
     def __str__(self):
         msg = f"{self.name}\n{'='*len(self.name)}\n"
-        msg += f"\tInfluence: {self.influence}\n"
-        msg += f"\tResources: {self.resources}\n"
-        msg += f"\tControlled By: {self.owner}\n"
-        msg += f"\tGround Forces: {self.num_ground_forces}\n"
+        msg += f"> Influence: {self.influence}\n"
+        msg += f"> Resources: {self.resources}\n"
+        msg += f"> Controlled By: {self.owner}\n"
+        msg += f"> Ground Forces: {self.num_ground_forces}\n"
         return msg
