@@ -67,11 +67,6 @@ class Tile():
         #pygame.draw.circle(screen, (255,0,0), self.get_pixel_position(), self.width / 2)
         screen.blit(self.img, self.draw_pos)
 
-        pygame.draw.circle(screen, (255,0,0), (self.draw_pos[0]+self.width, self.draw_pos[1]+self.width), 10)#self.width)
-        #pygame.draw.rect(screen, (100,100,255), (self.draw_pos[0], self.draw_pos[1], 
-                                             #self.img.get_rect().width, self.img.get_rect().width))#self.width)
-        #screen.blit(self.img, self.draw_pos)
-
 
         
 

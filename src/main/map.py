@@ -58,22 +58,49 @@ class Map():
         self.tile_size = self.tiles[(0,0,0)].rect.width // 2 + self.spacing
 
     def pixel_to_tile(self, pos, pan_offset, zoom_level):
+        """
+        Convert pixel coordinates to hex coordinates with improved precision.
+        
+        Args:
+            pos (tuple): Pixel coordinates
+            pan_offset (pygame.Vector2): Panning offset
+            zoom_level (float): Current zoom level
+        
+        Returns:
+            Tile object or None
+        """
+        # Recalculate tile size based on current zoom
+        base_tile_size = self.tiles[(0,0,0)].width + self.tiles[(0,0,0)].spacing # Use the base tile width
+        scaled_tile_size = base_tile_size
+
         # Adjust mouse position for panning and zooming
-        adjusted_pos = pygame.Vector2(pos) - pan_offset
-        
-        # Adjust for scaled tile size
-        self.get_tile_size()
-        
-        # Convert to hex coordinates
-        x, y = pygame.Vector2(adjusted_pos) - pygame.Vector2(self.center)
-        q = (2/3*x) / self.tile_size
-        r = (-1/3*x + math.sqrt(3)/3*y) / self.tile_size
-        s = -(q+r)
+        adjusted_pos = pygame.Vector2(pos) - pan_offset - pygame.Vector2(100,75)*zoom_level
 
-        q, r, s = round_cubic(q, r, s)
+        # Translate to center-relative coordinates
+        center_relative_pos = adjusted_pos - pygame.Vector2(self.center)
 
-        if (q,r,s) in self.tiles:
-            return self.tiles[(q,r,s)]
+        # Precise hex coordinate conversion
+        # Twilight Imperium hex grid uses a specific coordinate system
+        x = center_relative_pos.x / scaled_tile_size
+        y = center_relative_pos.y / scaled_tile_size
+
+        # Cube coordinate conversion (for pointy-top hexes)
+        q = 2/3*x
+        r = (-1/3)*x + math.sqrt(3)/3*y
+
+        print(f"Raw coordinates: q={q}, r={r}, s={-(q+r)}")
+
+
+        # Use the round_cubic function from utils to get the nearest hex
+        q, r, s = round_cubic(q, r, -(q+r))
+
+        print(f"Rounded coordinates: q={q}, r={r}, s={s}")
+        print(f"Tile exists: {(q, r, s) in self.tiles}")
+
+        # Check if the calculated coordinate exists in tiles
+        if (q, r, s) in self.tiles:
+            return self.tiles[(q, r, s)]
+        
         return None
     
     def get_pixel_position(self, q, r, s):
@@ -93,11 +120,7 @@ class Map():
             # Use high-quality original image and scale
             tile.scale_img(zoom_level)
             tile.draw(self.disp)
-
-        if (tile := self.pixel_to_tile(pos, pan_offset, zoom_level)) != None:
-            x, y = tile.get_pixel_position()
-            self.disp.blit(self.tiles[(0,0,0)].img, (x+self.center[0]+pan_offset[0], y+self.center[1]+pan_offset[1]))
-
+            
         # Check for hover tile
         hover_tile = self.pixel_to_tile(pos, pan_offset, zoom_level)
         
