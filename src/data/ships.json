@@ -1,0 +1,36 @@
+{
+    "Dreadnought":{
+        "name": "Dreadnought",
+        "cost": 4,
+        "combat": 5,
+        "movement": 1,
+        "capacity": 1,
+        "sustain": true,
+        "bombardment": 5
+    },
+    "Cruiser":{
+        "name": "Cruiser",
+        "cost": 2,
+        "combat": 7,
+        "movement": 2,
+        "capacity": 0,
+        "sustain": false
+    },
+    "Carrier":{
+        "name": "Carrier",
+        "cost": 3,
+        "combat": 9,
+        "movement": 1,
+        "capacity": 6,
+        "sustain": false
+        },
+    "Fighter":{
+        "name": "Fighter",
+        "cost": 1,
+        "combat": 9,
+        "movement": 0,
+        "capacity": 0,
+        "sustain": false,
+        "carriable": true
+    }
+}

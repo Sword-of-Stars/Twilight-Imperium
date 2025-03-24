@@ -13,8 +13,8 @@ class Map():
             map_string (str): The string representation of the map, radially generated from https://keeganw.github.io/ti4/
         """
 
-        self.screen = screen
-        self.rect = screen.get_rect()
+        self.disp = pygame.surface.Surface((1000,1000))
+        self.rect = self.disp.get_rect()
         self.center = self.rect.center
 
         self.tiles = []
@@ -38,9 +38,21 @@ class Map():
             if _id != 0: # don't draw empty tiles
                 self.tiles.append(Tile(*tile, _id=_id, scale=0.4, offset=self.center))
 
-    def update(self):
+    def pixel_to_tile(self, pos):
+        pass
+
+    def update(self, pos):
+        # draw all the tiles
         for tile in self.tiles:
-            tile.draw(self.screen)
+            tile.draw(self.disp)
+
+        # if the mouse is over the game area,
+        if self.rect.collidepoint(pos):
+            pass
+    
+    def draw(self, screen):
+        # draw the surface to the screen
+        screen.blit(self.disp, (0,0))
         
 
 
