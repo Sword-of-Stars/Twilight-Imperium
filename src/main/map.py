@@ -96,7 +96,7 @@ class Map():
 
         if (tile := self.pixel_to_tile(pos, pan_offset, zoom_level)) != None:
             x, y = tile.get_pixel_position()
-            self.disp.blit(self.tiles[(0,0,0)].img, (x, y))
+            self.disp.blit(self.tiles[(0,0,0)].img, (x+self.center[0]+pan_offset[0], y+self.center[1]+pan_offset[1]))
 
         # Check for hover tile
         hover_tile = self.pixel_to_tile(pos, pan_offset, zoom_level)
