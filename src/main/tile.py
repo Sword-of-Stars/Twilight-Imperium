@@ -3,6 +3,7 @@ import math
 import json
 
 from planet import Planet
+from player import Player
 
 class Tile():
     def __init__(self, q, r, s, _id, scale=0.5, offset=(100,100), spacing=5, data=dict()):
@@ -23,6 +24,12 @@ class Tile():
         self.planets = []
         self.initialize_planets(data)
 
+        self.space_area = []
+
+        # activations
+        self.is_active = False
+        self.command_counters = []
+
     def get_img(self):
         self.orig_img = pygame.image.load(f"src/data/tiles/ST_{self._id}.png").convert_alpha()
 
@@ -42,7 +49,7 @@ class Tile():
         y = self.width * (math.sqrt(3)/2 * self.q  +  math.sqrt(3) * self.r) - self.width//2
         return (x, y)
     
-    def get_zoomed_tile_position(self, pan_offset, zoom_level, center):
+    def get_zoomed_tile_position(self, pan_offset, center):
         """
         Calculate tile position considering zoom and pan
         """
@@ -67,11 +74,28 @@ class Tile():
         #pygame.draw.circle(screen, (255,0,0), self.get_pixel_position(), self.width / 2)
         screen.blit(self.img, self.draw_pos)
 
+    def activate(self, player: Player):
+        self.is_active = True        
+        self.command_counters.append(player.name)
 
-        
+    def deactivate(self):
+        self.is_active = False
+
+    def clear(self):
+        self.deactivate()
+        self.command_counters.clear()
+
+    def remove_command_counter(self, player):
+        if player.name in self.command_counters:
+            self.command_counters.remove(player.name)
 
     def __str__(self):
-        msg = f"System {self._id}\n"
+        msg = f"System {self._id} ({self.q, self.r, self.s})\n"
+        
+        for i, ship in self.space_area:
+            if i == 0: msg += f"\n{ship.owner}\n"
+            msg += f"{str(ship)}\n"
+
         for planet in self.planets:
             msg += str(planet)
         return msg

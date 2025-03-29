@@ -1,8 +1,7 @@
-from random import randint
 from typing import List
+from ship import Ship
 
-
-class Ship():
+class SpaceDock():
     """
     a class to represent a ship in the game
 
@@ -12,41 +11,20 @@ class Ship():
 
         #===== Immutable Properties =====#
         self.name = kwargs["name"]
-        self.combat = kwargs["combat"]
         self.move = kwargs["movement"]
         self.capacity = kwargs["capacity"]
-        self.cost = kwargs["cost"]
-
-        self.MAXHEALTH = 2 if kwargs["sustain"] else 1
 
         #===== Mutable Properties =====#
         self.owner = owner
-        self.health = self.MAXHEALTH
         self.in_cargo : List[Ship] = []
-
-    def make_attack_roll(self):
-        """
-        returns the result of a single attack roll
-        """
-        return randint(1, 10) >= self.combat
-
-    def assign_hit(self, hit: int = 1):
-        """
-        reduces the health of the ship by the given amount
-        """
-        for _ in range(hit):
-            self.health -= 1
-            if self.health <= 0:
-                self.destroy()
-                break
+        self.planet = kwargs["planet"]
 
     def destroy(self):
         """
         destroys the ship
         """
         self.owner = None
-        self.health = 0
-
+      
         for unit in self.in_cargo:
             unit.destroy()
         self.in_cargo = []

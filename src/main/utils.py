@@ -1,3 +1,10 @@
+import json
+
+def load_json(file):
+    with open(file, "r") as f:
+        return f
+
+
 # Helper functions for cube coordinates
 def cube_add(a, b):
     """Add two cube coordinates."""
