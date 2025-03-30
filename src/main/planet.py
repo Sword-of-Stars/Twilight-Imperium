@@ -28,10 +28,18 @@ class Planet():
     def exhaust(self):
         self.is_ready = False
 
+    def place_space_dock(self):
+        self.has_space_dock = True
+        print("placed a space dock")
+
+    def place_ground_forces(self, n):
+        self.num_ground_forces += n
+
     def __str__(self):
         msg = f"{self.name}\n{'='*len(self.name)}\n"
         msg += f"> Influence: {self.influence}\n"
         msg += f"> Resources: {self.resources}\n"
         msg += f"> Controlled By: {self.owner.name if self.owner != None else None}\n"
         msg += f"> Ground Forces: {self.num_ground_forces}\n"
+        msg += f"> Has Space Dock" if self.has_space_dock else ""
         return msg

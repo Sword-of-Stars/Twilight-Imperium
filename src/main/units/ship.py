@@ -7,12 +7,11 @@ class Ship():
 
     NOTE: later, this should inherit from UNIT
     """
-    def __init__(self, owner="Player 1", **kwargs):
-
+    def __init__(self, owner=None, **kwargs):
         #===== Immutable Properties =====#
         self.name = kwargs["name"]
         self.combat = kwargs["combat"]
-        self.move = kwargs["movement"]
+        self.move = kwargs["move"]
         self.capacity = kwargs["capacity"]
         self.cost = kwargs["cost"]
 
@@ -24,12 +23,18 @@ class Ship():
         self.in_cargo : List[Ship] = []
         self.system = kwargs["system"]
 
+    def set_ownership(self, owner):
+        self.owner = owner
 
     def make_attack_roll(self):
         """
         returns the result of a single attack roll
         """
         return randint(1, 10) >= self.combat
+    
+    def move_to_system(self, system):
+        self.system = system
+        system.place_in_space_area(self)
 
     def assign_hit(self, hit: int = 1):
         """
@@ -53,6 +58,10 @@ class Ship():
         self.in_cargo = []
 
     def __str__(self):
-        return f"[{self.owner}] {self.name} with {self.health} health carrying {len(self.in_cargo)} ships"
+        msg = f"[{self.owner.name}] {self.name} "
+        msg += "is sustaining damage " if (self.MAXHEALTH == 2 and self.health == 1) else ""
+        msg += f"carrying {len(self.in_cargo)} ships" if self.capacity != 0 else ""
+
+        return msg
     
 

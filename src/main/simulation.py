@@ -5,6 +5,7 @@ from map import Map
 from log import EventLog
 from player import Player
 from player_tracker import PlayerTracker
+from units import Carrier, Cruiser, Destroyer, Dreadnought, WarSun, Fighter, SpaceDock, GroundForce
 
 from utils import load_json
 
@@ -24,7 +25,6 @@ class Simulation:
         self.running = True
         self.visible = True
 
-
     def initialize_game(self):
         self.game_map = Map(map_string="42 30 41 38 29 34 23 28 27 46 20 21 37 50 32 22 31 25 0 0 39 2 24 0 0 0 36 4 33 0 0 0 40 1 26 0")
 
@@ -32,17 +32,30 @@ class Simulation:
             for planet in system.planets:
                 planet.ready()
 
-        self.players = [
-            Player("Player 1", starting_system=starting_systems[0]),
-            Player("Player 2", starting_system=starting_systems[1]),
-            Player("Player 3", starting_system=starting_systems[2])
-        ]
-
+        self.players = []
+        for i, player in enumerate(["Player 1", "Player 2", "Player 3"]):
+            self.players.append(
+                Player(player, 
+                   starting_system=starting_systems[i],
+                   starting_units=[
+                       Carrier(), 
+                       Carrier(),
+                       GroundForce(),
+                       GroundForce(),
+                       GroundForce(),
+                       GroundForce(),
+                       Destroyer(),
+                       SpaceDock()
+                       ]))
+         
         self.event_log.clear()
 
         self.player_tracker = PlayerTracker(self.players)
 
         self.running = True
+
+    def get_game_tensor(self):
+        pass
         
 
     def handle_events(self):

@@ -11,7 +11,7 @@ from matplotlib.ticker import PercentFormatter
 # Add the parent directory to the sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ships.ship import Ship
+from units.ship import Ship
 
 with open("src/data/ships.json") as f:
     ships = json.load(f)

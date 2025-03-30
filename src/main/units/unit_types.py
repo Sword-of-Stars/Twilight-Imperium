@@ -1,8 +1,8 @@
-from ship import Ship
+from .ship import Ship
 
 class Carrier(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "carrier",
             combat = 9,
             move = 1,
@@ -13,8 +13,8 @@ class Carrier(Ship):
             )
         
 class Dreadnought(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "dreadnought",
             combat = 5,
             move = 1,
@@ -28,8 +28,8 @@ class Dreadnought(Ship):
             )
         
 class Cruiser(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "cruiser",
             combat = 7,
             move = 2,
@@ -40,8 +40,8 @@ class Cruiser(Ship):
             )
         
 class Destroyer(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "destroyer",
             combat = 7,
             move = 2,
@@ -55,8 +55,8 @@ class Destroyer(Ship):
             )
         
 class WarSun(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "warsun",
             combat = 3,
             move = 2,
@@ -72,8 +72,8 @@ class WarSun(Ship):
             )
         
 class Fighter(Ship):
-    def __init__(self, system):
-        super.__init__(self, 
+    def __init__(self, system=None):
+        super().__init__(self, 
             name = "fighter",
             combat = 9,
             move = 0,

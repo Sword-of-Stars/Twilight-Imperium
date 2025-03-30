@@ -89,12 +89,17 @@ class Tile():
         if player.name in self.command_counters:
             self.command_counters.remove(player.name)
 
+    def place_in_space_area(self, ship):
+        self.space_area.append(ship)
+
     def __str__(self):
         msg = f"System {self._id} ({self.q, self.r, self.s})\n"
         
-        for i, ship in self.space_area:
-            if i == 0: msg += f"\n{ship.owner}\n"
+        for i, ship in enumerate(self.space_area):
+            if i == 0: msg += f"\nSpace Area\n"
             msg += f"{str(ship)}\n"
+
+        msg += "\n"
 
         for planet in self.planets:
             msg += str(planet)

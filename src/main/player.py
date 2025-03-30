@@ -1,4 +1,4 @@
-
+from units import Carrier, Cruiser, Destroyer, Dreadnought, WarSun, Fighter, SpaceDock, GroundForce, Ship
 
 class Player:
     def __init__(self, name, starting_system, starting_units=[]):
@@ -16,11 +16,19 @@ class Player:
         for planet in starting_system.planets:
             self.add_planet(planet)
 
+        self.initialize_units(starting_units, starting_system)
         self.info = str(self)
 
-    def initialize_units(self, starting_units):
-        pass
-
+    def initialize_units(self, starting_units, starting_system):
+        # place starting units in the home system
+        for unit in starting_units:
+            unit.set_ownership(self)
+            if isinstance(unit, SpaceDock):
+                unit.place_on_planet(self.planets[0])
+            elif isinstance(unit, Ship):
+                unit.move_to_system(starting_system)
+            elif isinstance(unit, GroundForce):
+                unit.move_to_planet(self.planets[0])
 
     def take_action(self):
         '''
