@@ -30,7 +30,6 @@ class Planet():
 
     def place_space_dock(self):
         self.has_space_dock = True
-        print("placed a space dock")
 
     def place_ground_forces(self, n):
         self.num_ground_forces += n

@@ -70,7 +70,6 @@ class Player:
 
         msg += "\nPlanets\n"
         for planet in self.planets:
-            print(str(planet))
             msg += str(planet)
 
         return msg
