@@ -24,7 +24,14 @@ class GroundForce():
     
     def move_to_planet(self, planet):
         self.planet = planet
-        planet.place_ground_forces(1)
+        planet.place_ground_forces(self)
+
+    def remove_from_planet(self):
+        self.planet.remove_ground_forces(self)
+        self.planet = None
+
+    def move_to_system(self, system):
+        pass
 
     def destroy(self):
         """

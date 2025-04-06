@@ -1,11 +1,18 @@
 import json
 import pygame, sys
+from random import randint
+from copy import deepcopy
+from typing import List
 
 from map import Map
 from log import EventLog
+from event import Event, TacticalAction
 from player import Player
 from player_tracker import PlayerTracker
 from units import Carrier, Cruiser, Destroyer, Dreadnought, WarSun, Fighter, SpaceDock, GroundForce
+from ti4_model import TwilightImperiumRL
+
+from attack import attack
 
 from utils import load_json
 
@@ -23,7 +30,11 @@ class Simulation:
         self.screen = screen
 
         self.running = True
+        self.game_over = False
         self.visible = True
+
+        #===== Game Attributes =====#
+        self.game_phase = "strategy"
 
     def initialize_game(self):
         self.game_map = Map(map_string="42 30 41 38 29 34 23 28 27 46 20 21 37 50 32 22 31 25 0 0 39 2 24 0 0 0 36 4 33 0 0 0 40 1 26 0")
@@ -32,10 +43,11 @@ class Simulation:
             for planet in system.planets:
                 planet.ready()
 
-        self.players = []
+        self.players: list[Player] = []
         for i, player in enumerate(["Player 1", "Player 2", "Player 3"]):
             self.players.append(
                 Player(player, 
+                   _id=i,
                    starting_system=starting_systems[i],
                    starting_units=[
                        Carrier(), 
@@ -51,14 +63,77 @@ class Simulation:
         self.event_log.clear()
 
         self.player_tracker = PlayerTracker(self.players)
+        self.first_player = randint(0, len(self.players)-1)
+        self.player_turn = self.first_player
+
+        self.strategy_cards = [
+            "leadership",
+            "diplomacy",
+            "construction",
+            "warfare"
+        ]
 
         self.running = True
+        self.phase = "strategy"
 
-    def get_game_tensor(self):
-        pass
+        self.event_log.add_event("[SYSTEM] Beginning the game!")
+
+        #features, adjacency = self.game_map.encode_board_state()
+
+    def strategy_phase(self):
+        '''available_cards = deepcopy(self.strategy_cards)
+        for i in range(len(self.players)):
+            idx = (i + self.first_player)%len(self.players)
+            chosen_card = self.players[idx].take_action(self.game_map, available_cards, self.phase)
+            available_cards.remove(chosen_card)
+            self.event_log.add_event(f"[STRATEGY] Player {idx} has chosen {chosen_card}")'''
+        for i in range(len(self.players)):
+            idx = (i + self.first_player)%len(self.players)
+            for event in self.players[idx].take_action(self.game_map, phase = self.phase):
+                self.event_log.add_event(event)
+
         
+        self.phase = "action"
+        self.event_log.add_event(f"[SYSTEM] Beginning the action phase!")
 
-    def handle_events(self):
+
+    def status_phase(self):
+        for tile in self.game_map.tiles.values():
+            tile.clear()
+        for player in self.players:
+            player.do_status_phase()
+        self.phase = "strategy"
+        
+    def take_turn(self):
+        for player in self.players:
+            if player.passed:
+                self.player_turn += 1
+                self.player_turn %= len(self.players)
+            else:
+                break
+        else:
+            # rotate over the first player
+            self.first_player += 1
+            self.first_player %= len(self.players)
+
+            self.phase = "status"
+            return 
+        
+        
+        current_player = self.players[self.player_turn]
+
+        print(f"======================== ACTION [{current_player.name}]==========================")
+
+        action = current_player.take_action(self.game_map)
+        res = action.execute() # updates the board
+        for r in res:
+            print(r)
+        self.event_log.add_event(str(res))
+
+        self.player_turn += 1
+        self.player_turn %= len(self.players)
+        
+    def handle_user_input(self):
         mouse_pos = pygame.mouse.get_pos()
 
         # Handle events
@@ -112,6 +187,24 @@ class Simulation:
         self.clock.tick(60)
 
     def run(self):
-        while self.running:
-            self.handle_events()
+        self.game_round = 1
+        while self.running and not self.game_over:
+            self.handle_user_input()
+
+            if self.phase == "strategy":
+                print(f"[SYSTEM] ============ Round {self.game_round} ================")
+
+                self.strategy_phase()
+            elif self.phase == "action":
+                self.take_turn()
+            elif self.phase == "status":
+                self.status_phase()
+                self.game_round += 1
+
+            for player in self.players:
+                if player.points >= 50:
+                    print("Yahjoo!")
+                    self.game_over = True
+            
             self.update()
+

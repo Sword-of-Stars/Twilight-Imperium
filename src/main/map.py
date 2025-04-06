@@ -1,6 +1,7 @@
 import pygame, sys
 import math
 import json
+import numpy as np
 
 from tile import Tile
 from utils import generate_concentric_rings, round_cubic
@@ -74,6 +75,10 @@ class Map():
                                 offset=self.center, spacing=self.spacing,
                                 data=planet_data[str(_id)])
                 self.tiles[tile] = tile_obj
+
+        # initialize neighbors
+        for tile in self.tiles.values():
+            tile.initialize_neighbors(self.tiles)
         
 
     def get_tile_size(self):
@@ -123,6 +128,13 @@ class Map():
         x = self.tile_size * (3./2 * q) - self.tile_size//2
         y = self.tile_size * (math.sqrt(3)/2 * q  +  math.sqrt(3) * r) - self.tile_size//2
         return (x, y)
+    
+    def get_distance(self, tile1, tile2):
+        """Calculate the distance between two tiles."""
+        dx = tile1[0] - tile2[0]
+        dy = tile1[1] - tile2[1]
+        dz = tile1[2] - tile2[2]
+        return (abs(dx) + abs(dy) + abs(dz)) / 2
 
     def update(self, pos):
         self.do_pan(pos)
@@ -215,4 +227,54 @@ class Map():
         if self.is_over(pos):
             # Adjust zoom level
             self.zoom_level = max(self.MIN_ZOOM, min(self.MAX_ZOOM, self.zoom_level + event.y * 0.1))
+
+    def encode_board_state(self):
+        """
+        Encodes the board state as a tensor for use in a graph convolutional neural network.
+        
+        Returns:
+            node_features (np.ndarray): A 2D array where each row represents a tile's features.
+            adjacency_matrix (np.ndarray): A 2D adjacency matrix representing tile connectivity.
+        """
+        num_tiles = len(self.tiles)
+        max_planet_features = 12
+        max_space_area = 7
+
+        feature_dim = max_planet_features + max_space_area  # Adjust based on the number of features you want to include
+        node_features = np.zeros((num_tiles, feature_dim))
+        adjacency_matrix = np.zeros((num_tiles, num_tiles))
+
+        # Map tile coordinates to indices for adjacency matrix
+        tile_indices = {tile: idx for idx, tile in enumerate(self.tiles.keys())}
+
+        for idx, (coords, tile) in enumerate(self.tiles.items()):
+            tile_encoding = tile.get_encoding()
+
+            # Flatten planet encodings into a fixed-size vector
+            planet_features = []
+            for planet in tile_encoding["planets"]:
+                planet_features.extend(planet)  # Flatten planet features into a single list
+
+            # Pad or truncate planet features to a fixed size (e.g., 10 values)
+            planet_features = planet_features[:max_planet_features] + [0] * (max_planet_features - len(planet_features))
+
+            # Encode ships as a count of each ship type (e.g., [fighters, carriers, dreadnoughts, etc.])
+            ship_types = ["fighter", "carrier", "dreadnought", "cruiser", "destroyer", "warsun"]
+            ship_counts = [tile_encoding["ships"].count(ship_type) for ship_type in ship_types]
+            space_area_owner = [tile_encoding["space_area_owner"]]
+
+            # Combine all features into a single feature vector
+            feature_vector = planet_features + ship_counts + space_area_owner
+
+            # Pad or truncate the feature vector to match the feature_dim
+            feature_vector = feature_vector[:feature_dim] + [0] * (feature_dim - len(feature_vector))
+            node_features[idx] = feature_vector
+
+            # Encode adjacency relationships
+            for neighbor_coords in tile.neighbors:
+                if neighbor_coords in tile_indices:
+                    neighbor_idx = tile_indices[neighbor_coords]
+                    adjacency_matrix[idx, neighbor_idx] = 1  # Mark as connected
+
+        return node_features, adjacency_matrix
 

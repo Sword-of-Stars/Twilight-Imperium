@@ -1,7 +1,7 @@
 import pyomo.environ as pyo
 from units import Carrier, Cruiser, Destroyer, Dreadnought, WarSun, Fighter, GroundForce, Ship
 
-def produce(disposition, system, planets):
+def produce(player, system):
     # Create model
     model = pyo.ConcreteModel("Unit Production with Planet Exhaustion and Influence Waste")
 
@@ -18,9 +18,9 @@ def produce(disposition, system, planets):
     model.x = pyo.Var(unit_names, within=pyo.NonNegativeIntegers)
 
     # Define planet exhaustion variables
-    planet_names = [planet.name for planet in planets]
-    resources = {planet.name: planet.resources for planet in planets}  # Resource values
-    influence = {planet.name: planet.influence for planet in planets}  # Influence values
+    planet_names = [planet.name for planet in player.planets]
+    resources = {planet.name: planet.resources for planet in player.planets}  # Resource values
+    influence = {planet.name: planet.influence for planet in player.planets}  # Influence values
     model.e = pyo.Var(planet_names, within=pyo.Binary)  # 1 if planet is exhausted, 0 otherwise
 
     # Total available resources and influence from exhausted planets
@@ -41,12 +41,12 @@ def produce(disposition, system, planets):
         model.even_constraints.add(model.x[unit] == 2 * model.y[unit])
 
     # Fighter capacity constraint
-    vacant_capacity = 2  # Example vacant capacity term
+    vacant_capacity = 0  # Example vacant capacity term
     fighter_capacity = sum(model.x[u] * units[i].capacity for i, u in enumerate(unit_names) if isinstance(units[i], Ship))
     model.fighter_capacity_constraint = pyo.Constraint(expr=model.x["fighter"] <= fighter_capacity + vacant_capacity)
 
     # Constraint: Maximum number of total units produced
-    max_units = 10  # Example maximum unit count
+    max_units = sum([planet.has_space_dock * (planet.resources + 3) for planet in player.planets])  # Example maximum unit count
     model.max_units_constraint = pyo.Constraint(expr=sum(model.x[u] for u in unit_names) <= max_units)
 
     # Define resource waste variable
@@ -66,8 +66,8 @@ def produce(disposition, system, planets):
     )
 
     # Objective: Maximize combat effectiveness - penalties for resource and influence waste
-    waste_penalty = 0.5  # Adjust to balance combat power vs. minimizing resource waste
-    influence_penalty = 0.9  # Penalty for wasting influence
+    waste_penalty = player.disposition["resource wastefulness"]  # Adjust to balance combat power vs. minimizing resource waste
+    influence_penalty = (1-waste_penalty)  # Penalty for wasting influence
     model.objective = pyo.Objective(
         expr=sum(combat_value[u] * model.x[u] for u in unit_names) 
         - waste_penalty * model.resource_waste 
@@ -80,25 +80,20 @@ def produce(disposition, system, planets):
     solver.solve(model)
 
     # Display results
-    print("Optimal unit production:")
-    for u in unit_names:
-        print(f"{u}: {model.x[u]()} units")
+    #print("Optimal unit production:")
+    ''' for u in unit_names:
+        print(f"{u}: {model.x[u]()} units")'''
+    units_produced = {u: model.x[u]() for u in unit_names}
 
-    print("\nExhausted planets:")
+    #print("\nExhausted planets:")
+    exhausted_planets = []
     for p in planet_names:
         if model.e[p]() == 1:
-            print(f"{p} (resources: {resources[p]}, influence: {influence[p]})")
+            #print(f"{p} (resources: {resources[p]}, influence: {influence[p]})")
+            exhausted_planets.append(p)
+    exhausted_planets = [p for p in player.planets if p.name in exhausted_planets]
 
-    print(f"\nWasted resources: {model.resource_waste()}")
-    print(f"Wasted influence: {model.influence_waste()}")
+    #print(f"\nWasted resources: {model.resource_waste()}")
+    #print(f"Wasted influence: {model.influence_waste()}")
 
-class Planet():
-    def __init__(self, name, resources, influence):
-        self.name = name
-        self.resources = resources
-        self.influence = influence
-
-# Example planets
-planets = [Planet("Mecatol Rex", 1, 6), Planet("Mehar Xull", 3, 1), Planet("Thibah", 1, 2)]
-
-produce(1, 2, planets)
+    return units_produced, exhausted_planets

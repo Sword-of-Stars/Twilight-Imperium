@@ -34,7 +34,23 @@ def assign_hits(fleet, hits):
     
     return priority
 
-def simulate_combat(fleet_1, fleet_2, debug=False):
+def hit_fighters(fleet, hits):
+    """
+    Assigns hits to fighters in a fleet
+    """
+    if not fleet:
+        return []
+    
+    for hit in range(hits):
+        for ship in fleet:
+            if ship.name == "fighter":
+                ship.assign_hit()
+                if ship.health <= 0:
+                    fleet.remove(ship)
+                    break
+    return fleet
+
+def simulate_space_combat(fleet_1, fleet_2, debug=False):
     """
     Simulates combat between two fleets
     Returns: winner (1 for player 1, -1 for player 2, 0 for draw),
@@ -47,6 +63,18 @@ def simulate_combat(fleet_1, fleet_2, debug=False):
     while fleet_1 and fleet_2:
         combat_round += 1
 
+        # anti-fighter barrage
+        for ship in fleet_2:
+            if ship.name == "destroyer" and [s.name for s in fleet_1].count("fighter") > 0:
+                afb_hits = ship.anti_fighter_barrage()
+                fleet_1 = hit_fighters(fleet_1, afb_hits)
+
+        for ship in fleet_1:
+            if ship.name == "destroyer" and [s.name for s in fleet_2].count("fighter") > 0:
+                afb_hits = ship.anti_fighter_barrage()
+                fleet_2 = hit_fighters(fleet_2, afb_hits)
+
+        # Attack rolls
         attacker_hits = sum([ship.make_attack_roll() for ship in fleet_1])
         defender_hits = sum([ship.make_attack_roll() for ship in fleet_2])
 
@@ -131,7 +159,7 @@ def run_simulations(fleet_1_config, fleet_2_config, num_simulations=10000):
         fleet_2 = create_fleet(fleet_2_config, "Player 2")
         
         # Run simulation
-        winner, remaining_1, remaining_2 = simulate_combat(fleet_1, fleet_2)
+        winner, remaining_1, remaining_2 = simulate_space_combat(fleet_1, fleet_2)
         
         # Record winner
         results["winner"][winner] += 1

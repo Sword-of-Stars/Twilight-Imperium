@@ -1,8 +1,16 @@
 import pygame
+import textwrap  # Import textwrap for wrapping text
+
 
 class EventLog:
-    def __init__(self):
+    def __init__(self, visible=True):
         self.events = []
+
+        self.visible = visible
+        if self.visible:
+            self.gui_attributes()
+
+    def gui_attributes(self):
         self.width, self.height = 540, 500
         self.disp = pygame.Surface((self.width, self.height))
         self.rect = self.disp.get_rect(topleft=(1040, 20))
@@ -13,7 +21,6 @@ class EventLog:
         self.font = pygame.font.Font(None, 24)
         self.title_font = pygame.font.Font(None, 32)
 
-        
        # Scrolling
         self.scroll_offset = 0
         self.line_height = 30
@@ -33,28 +40,36 @@ class EventLog:
         self.events.clear()
     
     def add_event(self, text):
-        """Add an event to the log."""
-        self.events.append(text)
-        self.max_scroll = max(0, len(self.events) - self.visible_lines)
+        """Add an event to the log, respecting newlines and wrapping long text."""
+        # Split the text into lines based on explicit newlines
+        lines = text.split("\n")
+        for line in lines:
+            # Wrap each line to fit within the log width
+            wrapped_lines = textwrap.wrap(line, width=(self.width - 20) // 10)  # Approximate character width
+            self.events.extend(wrapped_lines)
+
+        if self.visible:
+            self.max_scroll = max(0, len(self.events) - self.visible_lines)
 
     def update(self):
         """Update the display surface."""
-        self.disp.fill(self.background_color)
+        if self.visible:
+            self.disp.fill(self.background_color)
 
-        # Render the title
-        title_surf = self.title_font.render("Event Log", True, (255, 215, 0))  # Gold color
-        self.disp.blit(title_surf, (self.width // 2 - title_surf.get_width() // 2, 5))
+            # Render the title
+            title_surf = self.title_font.render("Event Log", True, (255, 215, 0))  # Gold color
+            self.disp.blit(title_surf, (self.width // 2 - title_surf.get_width() // 2, 5))
 
-        # Display event logs below the title
-        start_idx = self.scroll_offset
-        end_idx = min(start_idx + self.visible_lines, len(self.events))
-        for i, event in enumerate(self.events[start_idx:end_idx]):
-            text_surf = self.font.render(event, True, self.text_color)
-            self.disp.blit(text_surf, (10, i * self.line_height + 40))  # Adjusted for title space
-        
-        # Draw scrollbar if needed
-        if len(self.events) > self.visible_lines:
-            self._draw_scrollbar()
+            # Display event logs below the title
+            start_idx = self.scroll_offset
+            end_idx = min(start_idx + self.visible_lines, len(self.events))
+            for i, event in enumerate(self.events[start_idx:end_idx]):
+                text_surf = self.font.render(event, True, self.text_color)
+                self.disp.blit(text_surf, (10, i * self.line_height + 40))  # Adjusted for title space
+            
+            # Draw scrollbar if needed
+            if len(self.events) > self.visible_lines:
+                self._draw_scrollbar()
     
     def _draw_scrollbar(self):
         """Draw the scrollbar on the display surface."""
@@ -90,4 +105,5 @@ class EventLog:
 
     def draw(self, screen):
         """Draw the event log on the main screen."""
-        screen.blit(self.disp, self.rect.topleft)
+        if self.visible:
+            screen.blit(self.disp, self.rect.topleft)

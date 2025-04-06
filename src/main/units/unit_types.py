@@ -26,6 +26,9 @@ class Dreadnought(Ship):
                 "bombardment": (1, 5)
             }
             )
+    def bombardment(self):
+        hits = sum([super().make_attack_roll() for i in range(1)])
+        return hits
         
 class Cruiser(Ship):
     def __init__(self, system=None):
@@ -43,7 +46,7 @@ class Destroyer(Ship):
     def __init__(self, system=None):
         super().__init__(self, 
             name = "destroyer",
-            combat = 7,
+            combat = 9,
             move = 2,
             capacity = 0,
             cost = 2,
@@ -53,6 +56,10 @@ class Destroyer(Ship):
                 "anti-fighter barrage": (2,9)
                 }
             )
+        
+    def anti_fighter_barrage(self):
+        hits = sum([super().make_attack_roll() for i in range(2)])
+        return hits
         
 class WarSun(Ship):
     def __init__(self, system=None):
@@ -70,6 +77,14 @@ class WarSun(Ship):
                 "combat": (3,3)
                 }
             )
+        
+    def make_attack_roll(self):
+        hits = sum([super().make_attack_roll() for i in range(3)])
+        return hits
+    
+    def bombardment(self):
+        hits = sum([super().make_attack_roll() for i in range(3)])
+        return hits
         
 class Fighter(Ship):
     def __init__(self, system=None):

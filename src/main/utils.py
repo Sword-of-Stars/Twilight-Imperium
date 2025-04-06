@@ -2,7 +2,20 @@ import json
 
 def load_json(file):
     with open(file, "r") as f:
-        return f
+        return json.load(f)
+    
+from itertools import chain, combinations
+
+def powerset(iterable):
+    "powerset([s1, s2, s3]) → (), (s1,), (s2,), ..., (s1, s2, s3)"
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(1, len(s)+1))
+
+def calculate_fleet_value(fleet, disposition):
+    """
+    Calculate the total value of a fleet based on the ships it contains.
+    """
+    return sum(disposition[ship.name] for ship in fleet)  # Assuming each ship has a 'value' attribute
 
 
 # Helper functions for cube coordinates
