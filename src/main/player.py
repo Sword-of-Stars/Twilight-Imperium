@@ -14,11 +14,11 @@ from production import produce
 from units import Carrier, Cruiser, Destroyer, Dreadnought, WarSun, Fighter, SpaceDock, GroundForce, Ship
 
 class Player:
-    def __init__(self, name, _id, starting_system, starting_units=[], shared_model=None):
+    def __init__(self, name, _id, starting_system, starting_units=[], shared_model=None, disposition="base"):
         self.name = name
         self._id = _id
 
-        self.disposition = load_json("src/training/dispositions/base.json")
+        self.disposition = load_json(f"src/training/dispositions/{disposition}.json")
 
         self.model = TwilightImperiumRL() if shared_model == None else shared_model
 
@@ -139,7 +139,7 @@ class Player:
                 return self.tactical_model(decisions)
                 
             system, ships = res
-            print(f"{self.name} reinforced {system._id} with {ships}")
+            print(f"{self.name} reinforced {system._id} with {[s.name for s in ships]}")
 
             return TacticalAction(self, system, ships)
         

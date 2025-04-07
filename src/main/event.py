@@ -76,7 +76,7 @@ class SpaceCombat():
 
     def execute(self):
         # sort ships in the space area by owner
-        ships = sorted(self.active_system.space_area, key=lambda x: x.owner._id)
+        ships = sorted(self.active_system.space_area, key=lambda x: x.owner.name)
 
         fleet_1 = [ship for ship in ships if ship.owner == self.player]
         fleet_2 = [ship for ship in ships if ship.owner != self.player]
@@ -206,12 +206,15 @@ class Production():
                                 x.move_to_planet(planet)
 
                 elif unit == "fighter":
-                    for ship in self.active_system.space_area:
+                    pass
+                    '''for ship in self.active_system.space_area:
                         if ship.capacity - len(ship.in_cargo) > 0:
                             if num > 0:
                                 x = Fighter()
-                                x.move_to_system(ship)
-                                num -= 1
+                                x.set_ownership(self.player)
+                                ship.add_to_cargo(x)
+
+                                num -= 1'''
                 elif unit == "destroyer":
                     create_and_place(Destroyer)
                 elif unit == "cruiser":

@@ -1,0 +1,21 @@
+{
+    "resource wastefulness": 0.8,
+
+    "tactic":0.7,
+
+    "influence":0.2,
+    "resources":0.8,
+
+    "aggression": 0.5,
+    "point focus": 0.5,
+
+    "fighter": 1,
+    "carrier": 0.8,
+    "cruiser": 0.1,
+    "destroyer": 0.1,
+    "dreadnought": 0.2,
+    "warsun": 0.1,
+    "infantry": 0.8,
+    "space dock": 0.6,
+    "pds": 0.9
+}

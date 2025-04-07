@@ -95,5 +95,5 @@ class Fighter(Ship):
             capacity = 0,
             cost = 0.5,
             sustain = False,
-            system = system
+            system = system,
             )

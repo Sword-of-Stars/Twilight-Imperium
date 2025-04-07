@@ -1,6 +1,8 @@
 from copy import deepcopy
 import random
 
+from units.unit_types import Fighter
+
 def assign_hits(fleet, hits):
     """
     Assigns hits to ships in a fleet
@@ -43,7 +45,7 @@ def simulate_space_combat(fleet_1, fleet_2, debug=False):
     """
     fleet_1 = deepcopy(fleet_1)
     fleet_2 = deepcopy(fleet_2)
-    
+
     combat_round = 0
     while fleet_1 and fleet_2:
         combat_round += 1

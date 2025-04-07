@@ -5,7 +5,10 @@ import pygame
 from player import Player
 from simulation import Simulation
 from units import Carrier, Destroyer, GroundForce, SpaceDock
+import random
+import json
 
+random.seed(42)
 
 class Trainer:
     def __init__(self, num_players=3, episodes=1000, 
@@ -16,9 +19,30 @@ class Trainer:
         self.models_dir = models_dir
         self.logs_dir = logs_dir
         
-        # Ensure directories exist
-        os.makedirs(models_dir, exist_ok=True)
-        os.makedirs(logs_dir, exist_ok=True)
+        # Create timestamp for this training run
+        self.timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        
+        # Create directories for this training run
+        self.run_dir = os.path.join(logs_dir, f"run_{self.timestamp}")
+        self.run_models_dir = os.path.join(models_dir, f"run_{self.timestamp}")
+        self.stats_dir = os.path.join(self.run_dir, "stats")
+        self.viz_dir = os.path.join(self.run_dir, "visualizations")
+        
+        os.makedirs(self.run_dir, exist_ok=True)
+        os.makedirs(self.run_models_dir, exist_ok=True)
+        os.makedirs(self.stats_dir, exist_ok=True)
+        os.makedirs(self.viz_dir, exist_ok=True)
+        
+        # Training stats tracking
+        self.training_stats = {
+            "episodes": [],
+            "winners": [],
+            "victory_rounds": [],
+            "player_final_points": [],
+            "earliest_victory": None,
+            "avg_victory_round": 0,
+            "epsilon_history": []
+        }
         
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.log_file = os.path.join(logs_dir, f"training_{timestamp}.log")
@@ -41,11 +65,34 @@ class Trainer:
             for _ in range(num_players)
         ]
     
-    def _log(self, message):
-        """Log message to file and console"""
+    def _log(self, message, episode=None):
+        """Log message to episode file and console"""
         print(message)
-        with open(self.log_file, 'a') as f:
-            f.write(f"{message}\n")
+        
+        # Determine which log file to write to
+        if episode is not None:
+            log_file = os.path.join(self.run_dir, f"episode_{episode:04d}.log")
+        else:
+            log_file = os.path.join(self.run_dir, "training.log")
+            
+        with open(log_file, 'a') as f:
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            f.write(f"[{timestamp}] {message}\n")
+
+    def save_stats(self, episode, players):
+        """Save player stats for this episode"""
+        episode_stats = {
+            f"player_{i}": {
+                "name": player.name,
+                "final_points": player.points,
+            }
+            for i, player in enumerate(players)
+        }
+        
+        # Save to JSON
+        stats_file = os.path.join(self.stats_dir, f"episode_{episode:04d}_stats.json")
+        with open(stats_file, 'w') as f:
+            json.dump(episode_stats, f, indent=2)
     
     def initialize_pygame(self):
         """Set up pygame if not headless"""
@@ -62,9 +109,9 @@ class Trainer:
             clock = pygame.time.Clock()
             return screen, clock
     
-    def create_rl_player(self, name, _id, starting_system, starting_units, model):
+    def create_rl_player(self, name, _id, starting_system, starting_units, model, disposition):
         """Create an RL player with the given model"""
-        return Player(name, _id, starting_system, starting_units, model)
+        return Player(name, _id, starting_system, starting_units, model, disposition=disposition)
     
     def save_models(self, episode):
         """Save all models"""
@@ -85,7 +132,8 @@ class Trainer:
             
             # Replace default players with RL players
             sim.players = []
-            starting_systems = sim.game_map.get_start_tiles()
+            starting_systems = random.sample(sim.game_map.get_start_tiles(), len(sim.game_map.get_start_tiles()))
+            dispositions = ["balanced", "defensive", "despot"]
             
             for i in range(self.num_players):
                 # Default units for each player
@@ -97,11 +145,12 @@ class Trainer:
                 
                 # Create RL player with corresponding model
                 rl_player = self.create_rl_player(
-                    f"RLPlayer_{i}",
+                    f"RLPlayer_{i} ({dispositions[i]})",
                     _id=i,
                     starting_system=starting_systems[i],
                     starting_units=starting_units,
-                    model=self.models[i]
+                    model=self.models[i],
+                    disposition=dispositions[i]
                 )
                 
                 sim.players.append(rl_player)

@@ -59,7 +59,6 @@ class Ship():
         """
         if self.capacity != 0 and len(self.in_cargo) < self.capacity:
             self.in_cargo.append(unit)
-            unit.in_cargo = True
             return True
         return False
 

@@ -1,0 +1,21 @@
+{
+    "resource wastefulness": 1,
+
+    "tactic":1,
+
+    "influence":1,
+    "resources":1,
+
+    "aggression": 1,
+    "point focus": 1,
+
+    "fighter": 1,
+    "carrier": 1,
+    "cruiser": 1,
+    "destroyer": 1,
+    "dreadnought": 1,
+    "warsun": 1,
+    "infantry": 1,
+    "space dock": 1,
+    "pds": 1
+}

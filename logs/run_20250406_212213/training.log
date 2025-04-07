@@ -1,0 +1,1077 @@
+[2025-04-06 21:22:14] Starting episode 1/500
+[2025-04-06 21:22:14] [Episode 1] Round 1
+[2025-04-06 21:22:14] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:22:14] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:22:14] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:22:15] [Episode 1] Round 2
+[2025-04-06 21:22:15] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:22:15] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:22:15] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:22:17] [Episode 1] Round 3
+[2025-04-06 21:22:17] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:22:17] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 21:22:17] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:22:49] [Episode 1] Round 4
+[2025-04-06 21:22:49] RLPlayer_0 (balanced) has 18 points
+[2025-04-06 21:22:49] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 21:22:49] RLPlayer_2 (despot) has 18 points
+[2025-04-06 21:23:11] [Episode 1] Round 5
+[2025-04-06 21:23:11] RLPlayer_0 (balanced) has 32 points
+[2025-04-06 21:23:11] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 21:23:11] RLPlayer_2 (despot) has 27 points
+[2025-04-06 21:25:20] [Episode 1] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:25:20] [Episode 1] Final points:
+[2025-04-06 21:25:20] RLPlayer_0 (balanced): 48
+[2025-04-06 21:25:20] RLPlayer_1 (defensive): 74
+[2025-04-06 21:25:20] RLPlayer_2 (despot): 36
+[2025-04-06 21:25:20] Model epsilon: 0.9950
+[2025-04-06 21:25:20] Model epsilon: 0.9950
+[2025-04-06 21:25:20] Model epsilon: 0.9950
+[2025-04-06 21:25:20] Starting episode 2/500
+[2025-04-06 21:25:21] [Episode 2] Round 1
+[2025-04-06 21:25:21] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:25:21] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:25:21] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:25:21] [Episode 2] Round 2
+[2025-04-06 21:25:21] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:25:21] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:25:21] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:25:23] [Episode 2] Round 3
+[2025-04-06 21:25:23] RLPlayer_0 (balanced) has 8 points
+[2025-04-06 21:25:23] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 21:25:23] RLPlayer_2 (despot) has 11 points
+[2025-04-06 21:25:26] [Episode 2] Round 4
+[2025-04-06 21:25:26] RLPlayer_0 (balanced) has 14 points
+[2025-04-06 21:25:26] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 21:25:26] RLPlayer_2 (despot) has 20 points
+[2025-04-06 21:25:51] [Episode 2] Round 5
+[2025-04-06 21:25:51] RLPlayer_0 (balanced) has 25 points
+[2025-04-06 21:25:51] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 21:25:51] RLPlayer_2 (despot) has 31 points
+[2025-04-06 21:26:12] [Episode 2] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:26:12] [Episode 2] Final points:
+[2025-04-06 21:26:12] RLPlayer_0 (balanced): 40
+[2025-04-06 21:26:12] RLPlayer_1 (defensive): 71
+[2025-04-06 21:26:12] RLPlayer_2 (despot): 44
+[2025-04-06 21:26:12] Model epsilon: 0.9900
+[2025-04-06 21:26:12] Model epsilon: 0.9900
+[2025-04-06 21:26:12] Model epsilon: 0.9900
+[2025-04-06 21:26:12] Starting episode 3/500
+[2025-04-06 21:26:13] [Episode 3] Round 1
+[2025-04-06 21:26:13] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:26:13] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:26:13] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:26:13] [Episode 3] Round 2
+[2025-04-06 21:26:13] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:26:13] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:26:13] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:26:15] [Episode 3] Round 3
+[2025-04-06 21:26:15] RLPlayer_0 (balanced) has 8 points
+[2025-04-06 21:26:15] RLPlayer_1 (defensive) has 9 points
+[2025-04-06 21:26:15] RLPlayer_2 (despot) has 12 points
+[2025-04-06 21:26:18] [Episode 3] Round 4
+[2025-04-06 21:26:18] RLPlayer_0 (balanced) has 14 points
+[2025-04-06 21:26:18] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:26:18] RLPlayer_2 (despot) has 22 points
+[2025-04-06 21:26:43] [Episode 3] Round 5
+[2025-04-06 21:26:43] RLPlayer_0 (balanced) has 25 points
+[2025-04-06 21:26:43] RLPlayer_1 (defensive) has 19 points
+[2025-04-06 21:26:43] RLPlayer_2 (despot) has 34 points
+[2025-04-06 21:26:56] [Episode 3] Round 6
+[2025-04-06 21:26:56] RLPlayer_0 (balanced) has 38 points
+[2025-04-06 21:26:56] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 21:26:56] RLPlayer_2 (despot) has 48 points
+[2025-04-06 21:27:02] [Episode 3] RLPlayer_2 (despot) won in round 7!
+[2025-04-06 21:27:02] [Episode 3] Final points:
+[2025-04-06 21:27:02] RLPlayer_0 (balanced): 53
+[2025-04-06 21:27:02] RLPlayer_1 (defensive): 32
+[2025-04-06 21:27:02] RLPlayer_2 (despot): 64
+[2025-04-06 21:27:02] Model epsilon: 0.9851
+[2025-04-06 21:27:02] Model epsilon: 0.9851
+[2025-04-06 21:27:02] Model epsilon: 0.9851
+[2025-04-06 21:27:02] Starting episode 4/500
+[2025-04-06 21:27:02] [Episode 4] Round 1
+[2025-04-06 21:27:02] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:27:02] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:27:02] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:27:02] [Episode 4] Round 2
+[2025-04-06 21:27:02] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:27:02] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:27:02] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:27:05] [Episode 4] Round 3
+[2025-04-06 21:27:05] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:27:05] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 21:27:05] RLPlayer_2 (despot) has 11 points
+[2025-04-06 21:27:07] [Episode 4] Round 4
+[2025-04-06 21:27:07] RLPlayer_0 (balanced) has 19 points
+[2025-04-06 21:27:07] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 21:27:07] RLPlayer_2 (despot) has 20 points
+[2025-04-06 21:27:46] [Episode 4] Round 5
+[2025-04-06 21:27:46] RLPlayer_0 (balanced) has 28 points
+[2025-04-06 21:27:46] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 21:27:46] RLPlayer_2 (despot) has 31 points
+[2025-04-06 21:28:20] [Episode 4] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:28:20] [Episode 4] Final points:
+[2025-04-06 21:28:20] RLPlayer_0 (balanced): 38
+[2025-04-06 21:28:20] RLPlayer_1 (defensive): 69
+[2025-04-06 21:28:20] RLPlayer_2 (despot): 47
+[2025-04-06 21:28:20] Model epsilon: 0.9801
+[2025-04-06 21:28:20] Model epsilon: 0.9801
+[2025-04-06 21:28:20] Model epsilon: 0.9801
+[2025-04-06 21:28:20] Starting episode 5/500
+[2025-04-06 21:28:21] [Episode 5] Round 1
+[2025-04-06 21:28:21] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:28:21] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:28:21] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:28:21] [Episode 5] Round 2
+[2025-04-06 21:28:21] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:28:21] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:28:21] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:28:24] [Episode 5] Round 3
+[2025-04-06 21:28:24] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:28:24] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 21:28:24] RLPlayer_2 (despot) has 8 points
+[2025-04-06 21:28:29] [Episode 5] Round 4
+[2025-04-06 21:28:29] RLPlayer_0 (balanced) has 21 points
+[2025-04-06 21:28:29] RLPlayer_1 (defensive) has 26 points
+[2025-04-06 21:28:29] RLPlayer_2 (despot) has 14 points
+[2025-04-06 21:28:31] [Episode 5] Round 5
+[2025-04-06 21:28:31] RLPlayer_0 (balanced) has 35 points
+[2025-04-06 21:28:31] RLPlayer_1 (defensive) has 41 points
+[2025-04-06 21:28:31] RLPlayer_2 (despot) has 22 points
+[2025-04-06 21:28:57] [Episode 5] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:28:57] [Episode 5] Final points:
+[2025-04-06 21:28:57] RLPlayer_0 (balanced): 54
+[2025-04-06 21:28:57] RLPlayer_1 (defensive): 63
+[2025-04-06 21:28:57] RLPlayer_2 (despot): 32
+[2025-04-06 21:28:57] Model epsilon: 0.9752
+[2025-04-06 21:28:57] Model epsilon: 0.9752
+[2025-04-06 21:28:57] Model epsilon: 0.9752
+[2025-04-06 21:28:57] Starting episode 6/500
+[2025-04-06 21:28:57] [Episode 6] Round 1
+[2025-04-06 21:28:57] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:28:57] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:28:57] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:28:58] [Episode 6] Round 2
+[2025-04-06 21:28:58] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:28:58] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:28:58] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:29:00] [Episode 6] Round 3
+[2025-04-06 21:29:00] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:29:00] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 21:29:00] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:29:03] [Episode 6] Round 4
+[2025-04-06 21:29:03] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:29:03] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:29:03] RLPlayer_2 (despot) has 18 points
+[2025-04-06 21:30:46] [Episode 6] Round 5
+[2025-04-06 21:30:46] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:30:46] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 21:30:46] RLPlayer_2 (despot) has 28 points
+[2025-04-06 21:31:01] [Episode 6] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:31:01] [Episode 6] Final points:
+[2025-04-06 21:31:01] RLPlayer_0 (balanced): 74
+[2025-04-06 21:31:01] RLPlayer_1 (defensive): 38
+[2025-04-06 21:31:01] RLPlayer_2 (despot): 40
+[2025-04-06 21:31:01] Model epsilon: 0.9704
+[2025-04-06 21:31:01] Model epsilon: 0.9704
+[2025-04-06 21:31:01] Model epsilon: 0.9704
+[2025-04-06 21:31:01] Starting episode 7/500
+[2025-04-06 21:31:01] [Episode 7] Round 1
+[2025-04-06 21:31:01] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:31:01] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:31:01] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:31:02] [Episode 7] Round 2
+[2025-04-06 21:31:02] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:31:02] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:31:02] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:31:04] [Episode 7] Round 3
+[2025-04-06 21:31:04] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:31:04] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 21:31:04] RLPlayer_2 (despot) has 8 points
+[2025-04-06 21:31:16] [Episode 7] Round 4
+[2025-04-06 21:31:16] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:31:16] RLPlayer_1 (defensive) has 18 points
+[2025-04-06 21:31:16] RLPlayer_2 (despot) has 14 points
+[2025-04-06 21:31:39] [Episode 7] Round 5
+[2025-04-06 21:31:39] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:31:39] RLPlayer_1 (defensive) has 33 points
+[2025-04-06 21:31:39] RLPlayer_2 (despot) has 22 points
+[2025-04-06 21:31:47] [Episode 7] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:31:47] [Episode 7] Final points:
+[2025-04-06 21:31:47] RLPlayer_0 (balanced): 69
+[2025-04-06 21:31:47] RLPlayer_1 (defensive): 50
+[2025-04-06 21:31:47] RLPlayer_2 (despot): 32
+[2025-04-06 21:31:47] Model epsilon: 0.9655
+[2025-04-06 21:31:47] Model epsilon: 0.9655
+[2025-04-06 21:31:47] Model epsilon: 0.9655
+[2025-04-06 21:31:47] Starting episode 8/500
+[2025-04-06 21:31:47] [Episode 8] Round 1
+[2025-04-06 21:31:47] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:31:47] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:31:47] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:31:47] [Episode 8] Round 2
+[2025-04-06 21:31:47] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:31:47] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:31:47] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:31:50] [Episode 8] Round 3
+[2025-04-06 21:31:50] RLPlayer_0 (balanced) has 11 points
+[2025-04-06 21:31:50] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 21:31:50] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:31:51] [Episode 8] Round 4
+[2025-04-06 21:31:51] RLPlayer_0 (balanced) has 23 points
+[2025-04-06 21:31:51] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:31:51] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:31:54] [Episode 8] Round 5
+[2025-04-06 21:31:54] RLPlayer_0 (balanced) has 37 points
+[2025-04-06 21:31:54] RLPlayer_1 (defensive) has 22 points
+[2025-04-06 21:31:54] RLPlayer_2 (despot) has 26 points
+[2025-04-06 21:32:03] [Episode 8] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:32:03] [Episode 8] Final points:
+[2025-04-06 21:32:03] RLPlayer_0 (balanced): 54
+[2025-04-06 21:32:03] RLPlayer_1 (defensive): 30
+[2025-04-06 21:32:03] RLPlayer_2 (despot): 37
+[2025-04-06 21:32:03] Model epsilon: 0.9607
+[2025-04-06 21:32:03] Model epsilon: 0.9607
+[2025-04-06 21:32:03] Model epsilon: 0.9607
+[2025-04-06 21:32:03] Starting episode 9/500
+[2025-04-06 21:32:04] [Episode 9] Round 1
+[2025-04-06 21:32:04] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:32:04] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:32:04] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:32:04] [Episode 9] Round 2
+[2025-04-06 21:32:04] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:32:04] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:32:04] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:32:06] [Episode 9] Round 3
+[2025-04-06 21:32:06] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:32:06] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 21:32:06] RLPlayer_2 (despot) has 8 points
+[2025-04-06 21:32:18] [Episode 9] Round 4
+[2025-04-06 21:32:18] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:32:18] RLPlayer_1 (defensive) has 18 points
+[2025-04-06 21:32:18] RLPlayer_2 (despot) has 14 points
+[2025-04-06 21:32:42] [Episode 9] Round 5
+[2025-04-06 21:32:42] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:32:42] RLPlayer_1 (defensive) has 33 points
+[2025-04-06 21:32:42] RLPlayer_2 (despot) has 25 points
+[2025-04-06 21:32:52] [Episode 9] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:32:52] [Episode 9] Final points:
+[2025-04-06 21:32:52] RLPlayer_0 (balanced): 74
+[2025-04-06 21:32:52] RLPlayer_1 (defensive): 55
+[2025-04-06 21:32:52] RLPlayer_2 (despot): 40
+[2025-04-06 21:32:52] Model epsilon: 0.9559
+[2025-04-06 21:32:52] Model epsilon: 0.9559
+[2025-04-06 21:32:52] Model epsilon: 0.9559
+[2025-04-06 21:32:52] Starting episode 10/500
+[2025-04-06 21:32:52] [Episode 10] Round 1
+[2025-04-06 21:32:52] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:32:52] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:32:52] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:32:53] [Episode 10] Round 2
+[2025-04-06 21:32:53] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:32:53] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:32:53] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:32:55] [Episode 10] Round 3
+[2025-04-06 21:32:55] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:32:55] RLPlayer_1 (defensive) has 11 points
+[2025-04-06 21:32:55] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:33:00] [Episode 10] Round 4
+[2025-04-06 21:33:00] RLPlayer_0 (balanced) has 21 points
+[2025-04-06 21:33:00] RLPlayer_1 (defensive) has 20 points
+[2025-04-06 21:33:00] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:33:15] [Episode 10] Round 5
+[2025-04-06 21:33:15] RLPlayer_0 (balanced) has 36 points
+[2025-04-06 21:33:15] RLPlayer_1 (defensive) has 34 points
+[2025-04-06 21:33:15] RLPlayer_2 (despot) has 26 points
+[2025-04-06 21:34:14] [Episode 10] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:34:14] [Episode 10] Final points:
+[2025-04-06 21:34:14] RLPlayer_0 (balanced): 54
+[2025-04-06 21:34:14] RLPlayer_1 (defensive): 50
+[2025-04-06 21:34:14] RLPlayer_2 (despot): 37
+[2025-04-06 21:34:14] Model epsilon: 0.9511
+[2025-04-06 21:34:14] Model epsilon: 0.9511
+[2025-04-06 21:34:14] Model epsilon: 0.9511
+[2025-04-06 21:34:14] Starting episode 11/500
+[2025-04-06 21:34:14] [Episode 11] Round 1
+[2025-04-06 21:34:14] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:34:14] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:34:14] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:34:15] [Episode 11] Round 2
+[2025-04-06 21:34:15] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:34:15] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:34:15] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:34:17] [Episode 11] Round 3
+[2025-04-06 21:34:17] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:34:17] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 21:34:17] RLPlayer_2 (despot) has 11 points
+[2025-04-06 21:34:20] [Episode 11] Round 4
+[2025-04-06 21:34:20] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:34:20] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:34:20] RLPlayer_2 (despot) has 20 points
+[2025-04-06 21:34:46] [Episode 11] Round 5
+[2025-04-06 21:34:46] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:34:46] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 21:34:46] RLPlayer_2 (despot) has 31 points
+[2025-04-06 21:36:06] [Episode 11] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:36:06] [Episode 11] Final points:
+[2025-04-06 21:36:06] RLPlayer_0 (balanced): 71
+[2025-04-06 21:36:06] RLPlayer_1 (defensive): 38
+[2025-04-06 21:36:06] RLPlayer_2 (despot): 43
+[2025-04-06 21:36:06] Model epsilon: 0.9464
+[2025-04-06 21:36:06] Model epsilon: 0.9464
+[2025-04-06 21:36:06] Model epsilon: 0.9464
+[2025-04-06 21:36:06] Starting episode 12/500
+[2025-04-06 21:36:06] [Episode 12] Round 1
+[2025-04-06 21:36:06] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:36:06] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:36:06] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:36:07] [Episode 12] Round 2
+[2025-04-06 21:36:07] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:36:07] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:36:07] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:36:09] [Episode 12] Round 3
+[2025-04-06 21:36:09] RLPlayer_0 (balanced) has 9 points
+[2025-04-06 21:36:09] RLPlayer_1 (defensive) has 12 points
+[2025-04-06 21:36:09] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:36:24] [Episode 12] Round 4
+[2025-04-06 21:36:24] RLPlayer_0 (balanced) has 16 points
+[2025-04-06 21:36:24] RLPlayer_1 (defensive) has 26 points
+[2025-04-06 21:36:24] RLPlayer_2 (despot) has 21 points
+[2025-04-06 21:36:35] [Episode 12] Round 5
+[2025-04-06 21:36:35] RLPlayer_0 (balanced) has 23 points
+[2025-04-06 21:36:35] RLPlayer_1 (defensive) has 42 points
+[2025-04-06 21:36:35] RLPlayer_2 (despot) has 34 points
+[2025-04-06 21:40:55] [Episode 12] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:40:55] [Episode 12] Final points:
+[2025-04-06 21:40:55] RLPlayer_0 (balanced): 30
+[2025-04-06 21:40:55] RLPlayer_1 (defensive): 63
+[2025-04-06 21:40:55] RLPlayer_2 (despot): 51
+[2025-04-06 21:40:55] Model epsilon: 0.9416
+[2025-04-06 21:40:55] Model epsilon: 0.9416
+[2025-04-06 21:40:55] Model epsilon: 0.9416
+[2025-04-06 21:40:55] Starting episode 13/500
+[2025-04-06 21:40:55] [Episode 13] Round 1
+[2025-04-06 21:40:55] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:40:55] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:40:55] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:40:56] [Episode 13] Round 2
+[2025-04-06 21:40:56] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:40:56] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:40:56] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:40:58] [Episode 13] Round 3
+[2025-04-06 21:40:58] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:40:58] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 21:40:58] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:41:02] [Episode 13] Round 4
+[2025-04-06 21:41:02] RLPlayer_0 (balanced) has 21 points
+[2025-04-06 21:41:02] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:41:02] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:41:29] [Episode 13] Round 5
+[2025-04-06 21:41:29] RLPlayer_0 (balanced) has 35 points
+[2025-04-06 21:41:29] RLPlayer_1 (defensive) has 22 points
+[2025-04-06 21:41:29] RLPlayer_2 (despot) has 26 points
+[2025-04-06 21:41:35] [Episode 13] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:41:35] [Episode 13] Final points:
+[2025-04-06 21:41:35] RLPlayer_0 (balanced): 52
+[2025-04-06 21:41:35] RLPlayer_1 (defensive): 32
+[2025-04-06 21:41:35] RLPlayer_2 (despot): 40
+[2025-04-06 21:41:35] Model epsilon: 0.9369
+[2025-04-06 21:41:35] Model epsilon: 0.9369
+[2025-04-06 21:41:35] Model epsilon: 0.9369
+[2025-04-06 21:41:35] Starting episode 14/500
+[2025-04-06 21:41:36] [Episode 14] Round 1
+[2025-04-06 21:41:36] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:41:36] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:41:36] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:41:36] [Episode 14] Round 2
+[2025-04-06 21:41:36] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:41:36] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:41:36] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:41:38] [Episode 14] Round 3
+[2025-04-06 21:41:38] RLPlayer_0 (balanced) has 8 points
+[2025-04-06 21:41:38] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 21:41:38] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:41:41] [Episode 14] Round 4
+[2025-04-06 21:41:41] RLPlayer_0 (balanced) has 14 points
+[2025-04-06 21:41:41] RLPlayer_1 (defensive) has 21 points
+[2025-04-06 21:41:41] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:42:45] [Episode 14] Round 5
+[2025-04-06 21:42:45] RLPlayer_0 (balanced) has 25 points
+[2025-04-06 21:42:45] RLPlayer_1 (defensive) has 35 points
+[2025-04-06 21:42:45] RLPlayer_2 (despot) has 26 points
+[2025-04-06 21:43:34] [Episode 14] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:43:34] [Episode 14] Final points:
+[2025-04-06 21:43:34] RLPlayer_0 (balanced): 38
+[2025-04-06 21:43:34] RLPlayer_1 (defensive): 57
+[2025-04-06 21:43:34] RLPlayer_2 (despot): 36
+[2025-04-06 21:43:34] Model epsilon: 0.9322
+[2025-04-06 21:43:34] Model epsilon: 0.9322
+[2025-04-06 21:43:34] Model epsilon: 0.9322
+[2025-04-06 21:43:34] Starting episode 15/500
+[2025-04-06 21:43:34] [Episode 15] Round 1
+[2025-04-06 21:43:34] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:43:34] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:43:34] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:43:34] [Episode 15] Round 2
+[2025-04-06 21:43:34] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:43:34] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:43:34] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:43:37] [Episode 15] Round 3
+[2025-04-06 21:43:37] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:43:37] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 21:43:37] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:43:39] [Episode 15] Round 4
+[2025-04-06 21:43:39] RLPlayer_0 (balanced) has 22 points
+[2025-04-06 21:43:39] RLPlayer_1 (defensive) has 18 points
+[2025-04-06 21:43:39] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:44:42] [Episode 15] Round 5
+[2025-04-06 21:44:42] RLPlayer_0 (balanced) has 36 points
+[2025-04-06 21:44:42] RLPlayer_1 (defensive) has 28 points
+[2025-04-06 21:44:42] RLPlayer_2 (despot) has 27 points
+[2025-04-06 21:45:34] [Episode 15] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:45:34] [Episode 15] Final points:
+[2025-04-06 21:45:34] RLPlayer_0 (balanced): 52
+[2025-04-06 21:45:34] RLPlayer_1 (defensive): 40
+[2025-04-06 21:45:34] RLPlayer_2 (despot): 44
+[2025-04-06 21:45:34] Model epsilon: 0.9276
+[2025-04-06 21:45:34] Model epsilon: 0.9276
+[2025-04-06 21:45:34] Model epsilon: 0.9276
+[2025-04-06 21:45:34] Starting episode 16/500
+[2025-04-06 21:45:34] [Episode 16] Round 1
+[2025-04-06 21:45:34] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:45:34] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:45:34] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:45:34] [Episode 16] Round 2
+[2025-04-06 21:45:34] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:45:34] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:45:34] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:45:37] [Episode 16] Round 3
+[2025-04-06 21:45:37] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:45:37] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 21:45:37] RLPlayer_2 (despot) has 8 points
+[2025-04-06 21:45:49] [Episode 16] Round 4
+[2025-04-06 21:45:49] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:45:49] RLPlayer_1 (defensive) has 18 points
+[2025-04-06 21:45:49] RLPlayer_2 (despot) has 14 points
+[2025-04-06 21:45:58] [Episode 16] Round 5
+[2025-04-06 21:45:58] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:45:58] RLPlayer_1 (defensive) has 33 points
+[2025-04-06 21:45:58] RLPlayer_2 (despot) has 22 points
+[2025-04-06 21:46:06] [Episode 16] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:46:06] [Episode 16] Final points:
+[2025-04-06 21:46:06] RLPlayer_0 (balanced): 72
+[2025-04-06 21:46:06] RLPlayer_1 (defensive): 55
+[2025-04-06 21:46:06] RLPlayer_2 (despot): 32
+[2025-04-06 21:46:06] Model epsilon: 0.9229
+[2025-04-06 21:46:06] Model epsilon: 0.9229
+[2025-04-06 21:46:06] Model epsilon: 0.9229
+[2025-04-06 21:46:06] Starting episode 17/500
+[2025-04-06 21:46:07] [Episode 17] Round 1
+[2025-04-06 21:46:07] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:46:07] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:46:07] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:46:07] [Episode 17] Round 2
+[2025-04-06 21:46:07] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:46:07] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 21:46:07] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:46:09] [Episode 17] Round 3
+[2025-04-06 21:46:09] RLPlayer_0 (balanced) has 9 points
+[2025-04-06 21:46:09] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 21:46:09] RLPlayer_2 (despot) has 8 points
+[2025-04-06 21:46:16] [Episode 17] Round 4
+[2025-04-06 21:46:16] RLPlayer_0 (balanced) has 16 points
+[2025-04-06 21:46:16] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 21:46:16] RLPlayer_2 (despot) has 14 points
+[2025-04-06 21:48:42] [Episode 17] Round 5
+[2025-04-06 21:48:42] RLPlayer_0 (balanced) has 28 points
+[2025-04-06 21:48:42] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 21:48:42] RLPlayer_2 (despot) has 20 points
+[2025-04-06 21:49:13] [Episode 17] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 21:49:13] [Episode 17] Final points:
+[2025-04-06 21:49:13] RLPlayer_0 (balanced): 42
+[2025-04-06 21:49:13] RLPlayer_1 (defensive): 68
+[2025-04-06 21:49:13] RLPlayer_2 (despot): 33
+[2025-04-06 21:49:13] Model epsilon: 0.9183
+[2025-04-06 21:49:13] Model epsilon: 0.9183
+[2025-04-06 21:49:13] Model epsilon: 0.9183
+[2025-04-06 21:49:13] Starting episode 18/500
+[2025-04-06 21:49:14] [Episode 18] Round 1
+[2025-04-06 21:49:14] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:49:14] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:49:14] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:49:14] [Episode 18] Round 2
+[2025-04-06 21:49:14] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:49:14] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:49:14] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:49:16] [Episode 18] Round 3
+[2025-04-06 21:49:16] RLPlayer_0 (balanced) has 8 points
+[2025-04-06 21:49:16] RLPlayer_1 (defensive) has 9 points
+[2025-04-06 21:49:16] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:49:19] [Episode 18] Round 4
+[2025-04-06 21:49:19] RLPlayer_0 (balanced) has 14 points
+[2025-04-06 21:49:19] RLPlayer_1 (defensive) has 16 points
+[2025-04-06 21:49:19] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:49:21] [Episode 18] Round 5
+[2025-04-06 21:49:21] RLPlayer_0 (balanced) has 25 points
+[2025-04-06 21:49:21] RLPlayer_1 (defensive) has 28 points
+[2025-04-06 21:49:21] RLPlayer_2 (despot) has 26 points
+[2025-04-06 21:49:46] [Episode 18] Round 6
+[2025-04-06 21:49:46] RLPlayer_0 (balanced) has 36 points
+[2025-04-06 21:49:46] RLPlayer_1 (defensive) has 42 points
+[2025-04-06 21:49:46] RLPlayer_2 (despot) has 37 points
+[2025-04-06 21:50:29] [Episode 18] RLPlayer_1 (defensive) won in round 7!
+[2025-04-06 21:50:29] [Episode 18] Final points:
+[2025-04-06 21:50:29] RLPlayer_0 (balanced): 53
+[2025-04-06 21:50:29] RLPlayer_1 (defensive): 58
+[2025-04-06 21:50:29] RLPlayer_2 (despot): 51
+[2025-04-06 21:50:29] Model epsilon: 0.9137
+[2025-04-06 21:50:29] Model epsilon: 0.9137
+[2025-04-06 21:50:29] Model epsilon: 0.9137
+[2025-04-06 21:50:29] Starting episode 19/500
+[2025-04-06 21:50:30] [Episode 19] Round 1
+[2025-04-06 21:50:30] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:50:30] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:50:30] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:50:30] [Episode 19] Round 2
+[2025-04-06 21:50:30] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 21:50:30] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:50:30] RLPlayer_2 (despot) has 4 points
+[2025-04-06 21:50:32] [Episode 19] Round 3
+[2025-04-06 21:50:32] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 21:50:32] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 21:50:32] RLPlayer_2 (despot) has 9 points
+[2025-04-06 21:50:37] [Episode 19] Round 4
+[2025-04-06 21:50:37] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 21:50:37] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 21:50:37] RLPlayer_2 (despot) has 16 points
+[2025-04-06 21:50:49] [Episode 19] Round 5
+[2025-04-06 21:50:49] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 21:50:49] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 21:50:49] RLPlayer_2 (despot) has 23 points
+[2025-04-06 21:52:49] [Episode 19] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 21:52:49] [Episode 19] Final points:
+[2025-04-06 21:52:49] RLPlayer_0 (balanced): 72
+[2025-04-06 21:52:49] RLPlayer_1 (defensive): 40
+[2025-04-06 21:52:49] RLPlayer_2 (despot): 30
+[2025-04-06 21:52:49] Model epsilon: 0.9092
+[2025-04-06 21:52:49] Model epsilon: 0.9092
+[2025-04-06 21:52:49] Model epsilon: 0.9092
+[2025-04-06 21:52:49] Starting episode 20/500
+[2025-04-06 21:52:49] [Episode 20] Round 1
+[2025-04-06 21:52:49] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 21:52:49] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 21:52:49] RLPlayer_2 (despot) has 0 points
+[2025-04-06 21:52:50] [Episode 20] Round 2
+[2025-04-06 21:52:50] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 21:52:50] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 21:52:50] RLPlayer_2 (despot) has 5 points
+[2025-04-06 21:52:52] [Episode 20] Round 3
+[2025-04-06 21:52:52] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 21:52:52] RLPlayer_1 (defensive) has 9 points
+[2025-04-06 21:52:52] RLPlayer_2 (despot) has 10 points
+[2025-04-06 21:52:55] [Episode 20] Round 4
+[2025-04-06 21:52:55] RLPlayer_0 (balanced) has 21 points
+[2025-04-06 21:52:55] RLPlayer_1 (defensive) has 16 points
+[2025-04-06 21:52:55] RLPlayer_2 (despot) has 17 points
+[2025-04-06 21:57:45] [Episode 20] Round 5
+[2025-04-06 21:57:45] RLPlayer_0 (balanced) has 35 points
+[2025-04-06 21:57:45] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 21:57:45] RLPlayer_2 (despot) has 26 points
+[2025-04-06 22:03:33] [Episode 20] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 22:03:33] [Episode 20] Final points:
+[2025-04-06 22:03:33] RLPlayer_0 (balanced): 52
+[2025-04-06 22:03:33] RLPlayer_1 (defensive): 48
+[2025-04-06 22:03:33] RLPlayer_2 (despot): 37
+[2025-04-06 22:03:33] Model epsilon: 0.9046
+[2025-04-06 22:03:33] Model epsilon: 0.9046
+[2025-04-06 22:03:33] Model epsilon: 0.9046
+[2025-04-06 22:03:33] Starting episode 21/500
+[2025-04-06 22:03:33] [Episode 21] Round 1
+[2025-04-06 22:03:33] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:03:33] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:03:33] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:03:34] [Episode 21] Round 2
+[2025-04-06 22:03:34] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:03:34] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:03:34] RLPlayer_2 (despot) has 5 points
+[2025-04-06 22:03:36] [Episode 21] Round 3
+[2025-04-06 22:03:36] RLPlayer_0 (balanced) has 8 points
+[2025-04-06 22:03:36] RLPlayer_1 (defensive) has 9 points
+[2025-04-06 22:03:36] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:03:39] [Episode 21] Round 4
+[2025-04-06 22:03:39] RLPlayer_0 (balanced) has 14 points
+[2025-04-06 22:03:39] RLPlayer_1 (defensive) has 16 points
+[2025-04-06 22:03:39] RLPlayer_2 (despot) has 17 points
+[2025-04-06 22:04:53] [Episode 21] Round 5
+[2025-04-06 22:04:53] RLPlayer_0 (balanced) has 25 points
+[2025-04-06 22:04:53] RLPlayer_1 (defensive) has 28 points
+[2025-04-06 22:04:53] RLPlayer_2 (despot) has 26 points
+[2025-04-06 22:05:02] [Episode 21] Round 6
+[2025-04-06 22:05:02] RLPlayer_0 (balanced) has 38 points
+[2025-04-06 22:05:02] RLPlayer_1 (defensive) has 42 points
+[2025-04-06 22:05:02] RLPlayer_2 (despot) has 37 points
+[2025-04-06 22:06:01] [Episode 21] RLPlayer_1 (defensive) won in round 7!
+[2025-04-06 22:06:01] [Episode 21] Final points:
+[2025-04-06 22:06:01] RLPlayer_0 (balanced): 53
+[2025-04-06 22:06:01] RLPlayer_1 (defensive): 58
+[2025-04-06 22:06:01] RLPlayer_2 (despot): 49
+[2025-04-06 22:06:01] Model epsilon: 0.9001
+[2025-04-06 22:06:01] Model epsilon: 0.9001
+[2025-04-06 22:06:01] Model epsilon: 0.9001
+[2025-04-06 22:06:01] Starting episode 22/500
+[2025-04-06 22:06:01] [Episode 22] Round 1
+[2025-04-06 22:06:01] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:06:01] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:06:01] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:06:02] [Episode 22] Round 2
+[2025-04-06 22:06:02] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:06:02] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 22:06:02] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:06:04] [Episode 22] Round 3
+[2025-04-06 22:06:04] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 22:06:04] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 22:06:04] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:06:36] [Episode 22] Round 4
+[2025-04-06 22:06:36] RLPlayer_0 (balanced) has 18 points
+[2025-04-06 22:06:36] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 22:06:36] RLPlayer_2 (despot) has 18 points
+[2025-04-06 22:07:08] [Episode 22] Round 5
+[2025-04-06 22:07:08] RLPlayer_0 (balanced) has 31 points
+[2025-04-06 22:07:08] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 22:07:08] RLPlayer_2 (despot) has 28 points
+[2025-04-06 22:35:45] [Episode 22] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 22:35:45] [Episode 22] Final points:
+[2025-04-06 22:35:45] RLPlayer_0 (balanced): 49
+[2025-04-06 22:35:45] RLPlayer_1 (defensive): 68
+[2025-04-06 22:35:45] RLPlayer_2 (despot): 45
+[2025-04-06 22:35:45] Model epsilon: 0.8956
+[2025-04-06 22:35:45] Model epsilon: 0.8956
+[2025-04-06 22:35:45] Model epsilon: 0.8956
+[2025-04-06 22:35:45] Starting episode 23/500
+[2025-04-06 22:35:46] [Episode 23] Round 1
+[2025-04-06 22:35:46] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:35:46] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:35:46] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:35:46] [Episode 23] Round 2
+[2025-04-06 22:35:46] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:35:46] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 22:35:46] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:35:49] [Episode 23] Round 3
+[2025-04-06 22:35:49] RLPlayer_0 (balanced) has 11 points
+[2025-04-06 22:35:49] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 22:35:49] RLPlayer_2 (despot) has 8 points
+[2025-04-06 22:35:52] [Episode 23] Round 4
+[2025-04-06 22:35:52] RLPlayer_0 (balanced) has 20 points
+[2025-04-06 22:35:52] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 22:35:52] RLPlayer_2 (despot) has 14 points
+[2025-04-06 22:35:57] [Episode 23] Round 5
+[2025-04-06 22:35:57] RLPlayer_0 (balanced) has 31 points
+[2025-04-06 22:35:57] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 22:35:57] RLPlayer_2 (despot) has 25 points
+[2025-04-06 22:36:09] [Episode 23] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 22:36:09] [Episode 23] Final points:
+[2025-04-06 22:36:09] RLPlayer_0 (balanced): 45
+[2025-04-06 22:36:09] RLPlayer_1 (defensive): 71
+[2025-04-06 22:36:09] RLPlayer_2 (despot): 38
+[2025-04-06 22:36:09] Model epsilon: 0.8911
+[2025-04-06 22:36:09] Model epsilon: 0.8911
+[2025-04-06 22:36:09] Model epsilon: 0.8911
+[2025-04-06 22:36:09] Starting episode 24/500
+[2025-04-06 22:36:10] [Episode 24] Round 1
+[2025-04-06 22:36:10] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:36:10] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:36:10] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:36:10] [Episode 24] Round 2
+[2025-04-06 22:36:10] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:36:10] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 22:36:10] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:36:13] [Episode 24] Round 3
+[2025-04-06 22:36:13] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 22:36:13] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 22:36:13] RLPlayer_2 (despot) has 9 points
+[2025-04-06 22:36:15] [Episode 24] Round 4
+[2025-04-06 22:36:15] RLPlayer_0 (balanced) has 19 points
+[2025-04-06 22:36:15] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 22:36:15] RLPlayer_2 (despot) has 16 points
+[2025-04-06 22:37:19] [Episode 24] Round 5
+[2025-04-06 22:37:19] RLPlayer_0 (balanced) has 31 points
+[2025-04-06 22:37:19] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 22:37:19] RLPlayer_2 (despot) has 25 points
+[2025-04-06 22:38:08] [Episode 24] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 22:38:08] [Episode 24] Final points:
+[2025-04-06 22:38:08] RLPlayer_0 (balanced): 45
+[2025-04-06 22:38:08] RLPlayer_1 (defensive): 70
+[2025-04-06 22:38:08] RLPlayer_2 (despot): 36
+[2025-04-06 22:38:08] Model epsilon: 0.8867
+[2025-04-06 22:38:08] Model epsilon: 0.8867
+[2025-04-06 22:38:08] Model epsilon: 0.8867
+[2025-04-06 22:38:08] Starting episode 25/500
+[2025-04-06 22:38:08] [Episode 25] Round 1
+[2025-04-06 22:38:08] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:38:08] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:38:08] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:38:09] [Episode 25] Round 2
+[2025-04-06 22:38:09] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 22:38:09] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:38:09] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:38:11] [Episode 25] Round 3
+[2025-04-06 22:38:11] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 22:38:11] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 22:38:11] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:38:14] [Episode 25] Round 4
+[2025-04-06 22:38:14] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 22:38:14] RLPlayer_1 (defensive) has 18 points
+[2025-04-06 22:38:14] RLPlayer_2 (despot) has 18 points
+[2025-04-06 22:38:25] [Episode 25] Round 5
+[2025-04-06 22:38:25] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 22:38:25] RLPlayer_1 (defensive) has 28 points
+[2025-04-06 22:38:25] RLPlayer_2 (despot) has 29 points
+[2025-04-06 22:38:39] [Episode 25] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 22:38:39] [Episode 25] Final points:
+[2025-04-06 22:38:39] RLPlayer_0 (balanced): 69
+[2025-04-06 22:38:39] RLPlayer_1 (defensive): 40
+[2025-04-06 22:38:39] RLPlayer_2 (despot): 46
+[2025-04-06 22:38:39] Model epsilon: 0.8822
+[2025-04-06 22:38:39] Model epsilon: 0.8822
+[2025-04-06 22:38:39] Model epsilon: 0.8822
+[2025-04-06 22:38:39] Starting episode 26/500
+[2025-04-06 22:38:40] [Episode 26] Round 1
+[2025-04-06 22:38:40] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:38:40] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:38:40] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:38:40] [Episode 26] Round 2
+[2025-04-06 22:38:40] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:38:40] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:38:40] RLPlayer_2 (despot) has 5 points
+[2025-04-06 22:38:42] [Episode 26] Round 3
+[2025-04-06 22:38:42] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 22:38:42] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 22:38:42] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:38:45] [Episode 26] Round 4
+[2025-04-06 22:38:45] RLPlayer_0 (balanced) has 18 points
+[2025-04-06 22:38:45] RLPlayer_1 (defensive) has 21 points
+[2025-04-06 22:38:45] RLPlayer_2 (despot) has 17 points
+[2025-04-06 22:44:44] [Episode 26] Round 5
+[2025-04-06 22:44:44] RLPlayer_0 (balanced) has 32 points
+[2025-04-06 22:44:44] RLPlayer_1 (defensive) has 35 points
+[2025-04-06 22:44:44] RLPlayer_2 (despot) has 26 points
+[2025-04-06 22:48:01] [Episode 26] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 22:48:01] [Episode 26] Final points:
+[2025-04-06 22:48:01] RLPlayer_0 (balanced): 52
+[2025-04-06 22:48:01] RLPlayer_1 (defensive): 56
+[2025-04-06 22:48:01] RLPlayer_2 (despot): 37
+[2025-04-06 22:48:01] Model epsilon: 0.8778
+[2025-04-06 22:48:01] Model epsilon: 0.8778
+[2025-04-06 22:48:01] Model epsilon: 0.8778
+[2025-04-06 22:48:01] Starting episode 27/500
+[2025-04-06 22:48:01] [Episode 27] Round 1
+[2025-04-06 22:48:01] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:48:01] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:48:01] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:48:02] [Episode 27] Round 2
+[2025-04-06 22:48:02] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:48:02] RLPlayer_1 (defensive) has 5 points
+[2025-04-06 22:48:02] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:48:04] [Episode 27] Round 3
+[2025-04-06 22:48:04] RLPlayer_0 (balanced) has 9 points
+[2025-04-06 22:48:04] RLPlayer_1 (defensive) has 13 points
+[2025-04-06 22:48:04] RLPlayer_2 (despot) has 8 points
+[2025-04-06 22:48:11] [Episode 27] Round 4
+[2025-04-06 22:48:11] RLPlayer_0 (balanced) has 16 points
+[2025-04-06 22:48:11] RLPlayer_1 (defensive) has 29 points
+[2025-04-06 22:48:11] RLPlayer_2 (despot) has 14 points
+[2025-04-06 22:54:50] [Episode 27] Round 5
+[2025-04-06 22:54:50] RLPlayer_0 (balanced) has 28 points
+[2025-04-06 22:54:50] RLPlayer_1 (defensive) has 47 points
+[2025-04-06 22:54:50] RLPlayer_2 (despot) has 25 points
+[2025-04-06 22:55:18] [Episode 27] RLPlayer_1 (defensive) won in round 6!
+[2025-04-06 22:55:18] [Episode 27] Final points:
+[2025-04-06 22:55:18] RLPlayer_0 (balanced): 41
+[2025-04-06 22:55:18] RLPlayer_1 (defensive): 72
+[2025-04-06 22:55:18] RLPlayer_2 (despot): 38
+[2025-04-06 22:55:18] Model epsilon: 0.8734
+[2025-04-06 22:55:18] Model epsilon: 0.8734
+[2025-04-06 22:55:18] Model epsilon: 0.8734
+[2025-04-06 22:55:18] Starting episode 28/500
+[2025-04-06 22:55:19] [Episode 28] Round 1
+[2025-04-06 22:55:19] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:55:19] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:55:19] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:55:19] [Episode 28] Round 2
+[2025-04-06 22:55:19] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:55:19] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:55:19] RLPlayer_2 (despot) has 5 points
+[2025-04-06 22:55:21] [Episode 28] Round 3
+[2025-04-06 22:55:21] RLPlayer_0 (balanced) has 11 points
+[2025-04-06 22:55:21] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 22:55:21] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:55:27] [Episode 28] Round 4
+[2025-04-06 22:55:27] RLPlayer_0 (balanced) has 23 points
+[2025-04-06 22:55:27] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 22:55:27] RLPlayer_2 (despot) has 17 points
+[2025-04-06 22:55:33] [Episode 28] Round 5
+[2025-04-06 22:55:33] RLPlayer_0 (balanced) has 37 points
+[2025-04-06 22:55:33] RLPlayer_1 (defensive) has 22 points
+[2025-04-06 22:55:33] RLPlayer_2 (despot) has 26 points
+[2025-04-06 22:55:50] [Episode 28] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 22:55:50] [Episode 28] Final points:
+[2025-04-06 22:55:50] RLPlayer_0 (balanced): 54
+[2025-04-06 22:55:50] RLPlayer_1 (defensive): 30
+[2025-04-06 22:55:50] RLPlayer_2 (despot): 36
+[2025-04-06 22:55:50] Model epsilon: 0.8691
+[2025-04-06 22:55:50] Model epsilon: 0.8691
+[2025-04-06 22:55:50] Model epsilon: 0.8691
+[2025-04-06 22:55:51] Starting episode 29/500
+[2025-04-06 22:55:51] [Episode 29] Round 1
+[2025-04-06 22:55:51] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:55:51] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:55:51] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:55:51] [Episode 29] Round 2
+[2025-04-06 22:55:51] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 22:55:51] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:55:51] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:55:54] [Episode 29] Round 3
+[2025-04-06 22:55:54] RLPlayer_0 (balanced) has 12 points
+[2025-04-06 22:55:54] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 22:55:54] RLPlayer_2 (despot) has 11 points
+[2025-04-06 22:55:56] [Episode 29] Round 4
+[2025-04-06 22:55:56] RLPlayer_0 (balanced) has 26 points
+[2025-04-06 22:55:56] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 22:55:56] RLPlayer_2 (despot) has 18 points
+[2025-04-06 22:56:05] [Episode 29] Round 5
+[2025-04-06 22:56:05] RLPlayer_0 (balanced) has 42 points
+[2025-04-06 22:56:05] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 22:56:05] RLPlayer_2 (despot) has 27 points
+[2025-04-06 22:56:26] [Episode 29] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 22:56:26] [Episode 29] Final points:
+[2025-04-06 22:56:26] RLPlayer_0 (balanced): 60
+[2025-04-06 22:56:26] RLPlayer_1 (defensive): 38
+[2025-04-06 22:56:26] RLPlayer_2 (despot): 38
+[2025-04-06 22:56:26] Model epsilon: 0.8647
+[2025-04-06 22:56:26] Model epsilon: 0.8647
+[2025-04-06 22:56:26] Model epsilon: 0.8647
+[2025-04-06 22:56:26] Starting episode 30/500
+[2025-04-06 22:56:27] [Episode 30] Round 1
+[2025-04-06 22:56:27] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:56:27] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:56:27] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:56:27] [Episode 30] Round 2
+[2025-04-06 22:56:27] RLPlayer_0 (balanced) has 4 points
+[2025-04-06 22:56:27] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:56:27] RLPlayer_2 (despot) has 5 points
+[2025-04-06 22:56:30] [Episode 30] Round 3
+[2025-04-06 22:56:30] RLPlayer_0 (balanced) has 10 points
+[2025-04-06 22:56:30] RLPlayer_1 (defensive) has 8 points
+[2025-04-06 22:56:30] RLPlayer_2 (despot) has 10 points
+[2025-04-06 22:56:33] [Episode 30] Round 4
+[2025-04-06 22:56:33] RLPlayer_0 (balanced) has 21 points
+[2025-04-06 22:56:33] RLPlayer_1 (defensive) has 14 points
+[2025-04-06 22:56:33] RLPlayer_2 (despot) has 17 points
+[2025-04-06 22:57:37] [Episode 30] Round 5
+[2025-04-06 22:57:37] RLPlayer_0 (balanced) has 35 points
+[2025-04-06 22:57:37] RLPlayer_1 (defensive) has 25 points
+[2025-04-06 22:57:37] RLPlayer_2 (despot) has 26 points
+[2025-04-06 22:58:05] [Episode 30] RLPlayer_0 (balanced) won in round 6!
+[2025-04-06 22:58:05] [Episode 30] Final points:
+[2025-04-06 22:58:05] RLPlayer_0 (balanced): 52
+[2025-04-06 22:58:05] RLPlayer_1 (defensive): 38
+[2025-04-06 22:58:05] RLPlayer_2 (despot): 40
+[2025-04-06 22:58:05] Model epsilon: 0.8604
+[2025-04-06 22:58:05] Model epsilon: 0.8604
+[2025-04-06 22:58:05] Model epsilon: 0.8604
+[2025-04-06 22:58:05] Starting episode 31/500
+[2025-04-06 22:58:05] [Episode 31] Round 1
+[2025-04-06 22:58:05] RLPlayer_0 (balanced) has 0 points
+[2025-04-06 22:58:05] RLPlayer_1 (defensive) has 0 points
+[2025-04-06 22:58:05] RLPlayer_2 (despot) has 0 points
+[2025-04-06 22:58:05] [Episode 31] Round 2
+[2025-04-06 22:58:05] RLPlayer_0 (balanced) has 5 points
+[2025-04-06 22:58:05] RLPlayer_1 (defensive) has 4 points
+[2025-04-06 22:58:05] RLPlayer_2 (despot) has 4 points
+[2025-04-06 22:58:08] [Episode 31] Round 3
+[2025-04-06 22:58:08] RLPlayer_0 (balanced) has 13 points
+[2025-04-06 22:58:08] RLPlayer_1 (defensive) has 10 points
+[2025-04-06 22:58:08] RLPlayer_2 (despot) has 9 points
+[2025-04-06 22:58:11] [Episode 31] Round 4
+[2025-04-06 22:58:11] RLPlayer_0 (balanced) has 29 points
+[2025-04-06 22:58:11] RLPlayer_1 (defensive) has 19 points
+[2025-04-06 22:58:11] RLPlayer_2 (despot) has 16 points
+[2025-04-06 22:58:24] [Episode 31] Round 5
+[2025-04-06 22:58:24] RLPlayer_0 (balanced) has 47 points
+[2025-04-06 22:58:24] RLPlayer_1 (defensive) has 30 points
+[2025-04-06 22:58:24] RLPlayer_2 (despot) has 28 points
+[2025-04-07 00:00:12] [Episode 31] RLPlayer_0 (balanced) won in round 6!
+[2025-04-07 00:00:12] [Episode 31] Final points:
+[2025-04-07 00:00:12] RLPlayer_0 (balanced): 69
+[2025-04-07 00:00:12] RLPlayer_1 (defensive): 48
+[2025-04-07 00:00:12] RLPlayer_2 (despot): 42
+[2025-04-07 00:00:12] Model epsilon: 0.8561
+[2025-04-07 00:00:12] Model epsilon: 0.8561
+[2025-04-07 00:00:12] Model epsilon: 0.8561
+[2025-04-07 00:00:12] Starting episode 32/500
+[2025-04-07 00:00:13] [Episode 32] Round 1
+[2025-04-07 00:00:13] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:00:13] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:00:13] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:00:13] [Episode 32] Round 2
+[2025-04-07 00:00:13] RLPlayer_0 (balanced) has 4 points
+[2025-04-07 00:00:13] RLPlayer_1 (defensive) has 4 points
+[2025-04-07 00:00:13] RLPlayer_2 (despot) has 5 points
+[2025-04-07 00:00:15] [Episode 32] Round 3
+[2025-04-07 00:00:15] RLPlayer_0 (balanced) has 8 points
+[2025-04-07 00:00:15] RLPlayer_1 (defensive) has 10 points
+[2025-04-07 00:00:15] RLPlayer_2 (despot) has 10 points
+[2025-04-07 00:00:18] [Episode 32] Round 4
+[2025-04-07 00:00:18] RLPlayer_0 (balanced) has 14 points
+[2025-04-07 00:00:18] RLPlayer_1 (defensive) has 21 points
+[2025-04-07 00:00:18] RLPlayer_2 (despot) has 17 points
+[2025-04-07 00:00:47] [Episode 32] Round 5
+[2025-04-07 00:00:47] RLPlayer_0 (balanced) has 25 points
+[2025-04-07 00:00:47] RLPlayer_1 (defensive) has 34 points
+[2025-04-07 00:00:47] RLPlayer_2 (despot) has 26 points
+[2025-04-07 00:00:51] [Episode 32] RLPlayer_1 (defensive) won in round 6!
+[2025-04-07 00:00:51] [Episode 32] Final points:
+[2025-04-07 00:00:51] RLPlayer_0 (balanced): 38
+[2025-04-07 00:00:51] RLPlayer_1 (defensive): 52
+[2025-04-07 00:00:51] RLPlayer_2 (despot): 36
+[2025-04-07 00:00:51] Model epsilon: 0.8518
+[2025-04-07 00:00:51] Model epsilon: 0.8518
+[2025-04-07 00:00:51] Model epsilon: 0.8518
+[2025-04-07 00:00:51] Starting episode 33/500
+[2025-04-07 00:00:52] [Episode 33] Round 1
+[2025-04-07 00:00:52] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:00:52] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:00:52] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:00:52] [Episode 33] Round 2
+[2025-04-07 00:00:52] RLPlayer_0 (balanced) has 4 points
+[2025-04-07 00:00:52] RLPlayer_1 (defensive) has 5 points
+[2025-04-07 00:00:52] RLPlayer_2 (despot) has 4 points
+[2025-04-07 00:00:54] [Episode 33] Round 3
+[2025-04-07 00:00:54] RLPlayer_0 (balanced) has 10 points
+[2025-04-07 00:00:54] RLPlayer_1 (defensive) has 13 points
+[2025-04-07 00:00:54] RLPlayer_2 (despot) has 8 points
+[2025-04-07 00:01:06] [Episode 33] Round 4
+[2025-04-07 00:01:06] RLPlayer_0 (balanced) has 18 points
+[2025-04-07 00:01:06] RLPlayer_1 (defensive) has 29 points
+[2025-04-07 00:01:06] RLPlayer_2 (despot) has 14 points
+[2025-04-07 00:01:19] [Episode 33] Round 5
+[2025-04-07 00:01:19] RLPlayer_0 (balanced) has 33 points
+[2025-04-07 00:01:19] RLPlayer_1 (defensive) has 47 points
+[2025-04-07 00:01:19] RLPlayer_2 (despot) has 25 points
+[2025-04-07 00:01:22] [Episode 33] RLPlayer_1 (defensive) won in round 6!
+[2025-04-07 00:01:22] [Episode 33] Final points:
+[2025-04-07 00:01:22] RLPlayer_0 (balanced): 51
+[2025-04-07 00:01:22] RLPlayer_1 (defensive): 69
+[2025-04-07 00:01:22] RLPlayer_2 (despot): 38
+[2025-04-07 00:01:22] Model epsilon: 0.8475
+[2025-04-07 00:01:22] Model epsilon: 0.8475
+[2025-04-07 00:01:22] Model epsilon: 0.8475
+[2025-04-07 00:01:22] Starting episode 34/500
+[2025-04-07 00:01:22] [Episode 34] Round 1
+[2025-04-07 00:01:22] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:01:22] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:01:22] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:01:23] [Episode 34] Round 2
+[2025-04-07 00:01:23] RLPlayer_0 (balanced) has 4 points
+[2025-04-07 00:01:23] RLPlayer_1 (defensive) has 4 points
+[2025-04-07 00:01:23] RLPlayer_2 (despot) has 5 points
+[2025-04-07 00:01:25] [Episode 34] Round 3
+[2025-04-07 00:01:25] RLPlayer_0 (balanced) has 10 points
+[2025-04-07 00:01:25] RLPlayer_1 (defensive) has 11 points
+[2025-04-07 00:01:25] RLPlayer_2 (despot) has 10 points
+[2025-04-07 00:01:30] [Episode 34] Round 4
+[2025-04-07 00:01:30] RLPlayer_0 (balanced) has 21 points
+[2025-04-07 00:01:30] RLPlayer_1 (defensive) has 20 points
+[2025-04-07 00:01:30] RLPlayer_2 (despot) has 17 points
+[2025-04-07 00:01:47] [Episode 34] Round 5
+[2025-04-07 00:01:47] RLPlayer_0 (balanced) has 35 points
+[2025-04-07 00:01:47] RLPlayer_1 (defensive) has 31 points
+[2025-04-07 00:01:47] RLPlayer_2 (despot) has 26 points
+[2025-04-07 00:01:52] [Episode 34] RLPlayer_0 (balanced) won in round 6!
+[2025-04-07 00:01:52] [Episode 34] Final points:
+[2025-04-07 00:01:52] RLPlayer_0 (balanced): 50
+[2025-04-07 00:01:52] RLPlayer_1 (defensive): 47
+[2025-04-07 00:01:52] RLPlayer_2 (despot): 36
+[2025-04-07 00:01:52] Model epsilon: 0.8433
+[2025-04-07 00:01:52] Model epsilon: 0.8433
+[2025-04-07 00:01:52] Model epsilon: 0.8433
+[2025-04-07 00:01:52] Starting episode 35/500
+[2025-04-07 00:01:52] [Episode 35] Round 1
+[2025-04-07 00:01:52] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:01:52] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:01:52] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:01:53] [Episode 35] Round 2
+[2025-04-07 00:01:53] RLPlayer_0 (balanced) has 4 points
+[2025-04-07 00:01:53] RLPlayer_1 (defensive) has 4 points
+[2025-04-07 00:01:53] RLPlayer_2 (despot) has 5 points
+[2025-04-07 00:01:55] [Episode 35] Round 3
+[2025-04-07 00:01:55] RLPlayer_0 (balanced) has 10 points
+[2025-04-07 00:01:55] RLPlayer_1 (defensive) has 9 points
+[2025-04-07 00:01:55] RLPlayer_2 (despot) has 10 points
+[2025-04-07 00:01:58] [Episode 35] Round 4
+[2025-04-07 00:01:58] RLPlayer_0 (balanced) has 22 points
+[2025-04-07 00:01:58] RLPlayer_1 (defensive) has 16 points
+[2025-04-07 00:01:58] RLPlayer_2 (despot) has 17 points
+[2025-04-07 00:02:09] [Episode 35] Round 5
+[2025-04-07 00:02:09] RLPlayer_0 (balanced) has 36 points
+[2025-04-07 00:02:09] RLPlayer_1 (defensive) has 28 points
+[2025-04-07 00:02:09] RLPlayer_2 (despot) has 26 points
+[2025-04-07 00:05:20] [Episode 35] RLPlayer_0 (balanced) won in round 6!
+[2025-04-07 00:05:20] [Episode 35] Final points:
+[2025-04-07 00:05:20] RLPlayer_0 (balanced): 54
+[2025-04-07 00:05:20] RLPlayer_1 (defensive): 47
+[2025-04-07 00:05:20] RLPlayer_2 (despot): 36
+[2025-04-07 00:05:20] Model epsilon: 0.8391
+[2025-04-07 00:05:20] Model epsilon: 0.8391
+[2025-04-07 00:05:20] Model epsilon: 0.8391
+[2025-04-07 00:05:20] Starting episode 36/500
+[2025-04-07 00:05:20] [Episode 36] Round 1
+[2025-04-07 00:05:20] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:05:20] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:05:20] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:05:21] [Episode 36] Round 2
+[2025-04-07 00:05:21] RLPlayer_0 (balanced) has 5 points
+[2025-04-07 00:05:21] RLPlayer_1 (defensive) has 4 points
+[2025-04-07 00:05:21] RLPlayer_2 (despot) has 4 points
+[2025-04-07 00:05:23] [Episode 36] Round 3
+[2025-04-07 00:05:23] RLPlayer_0 (balanced) has 13 points
+[2025-04-07 00:05:23] RLPlayer_1 (defensive) has 8 points
+[2025-04-07 00:05:23] RLPlayer_2 (despot) has 9 points
+[2025-04-07 00:05:26] [Episode 36] Round 4
+[2025-04-07 00:05:26] RLPlayer_0 (balanced) has 29 points
+[2025-04-07 00:05:26] RLPlayer_1 (defensive) has 14 points
+[2025-04-07 00:05:26] RLPlayer_2 (despot) has 16 points
+[2025-04-07 00:06:39] [Episode 36] Round 5
+[2025-04-07 00:06:39] RLPlayer_0 (balanced) has 47 points
+[2025-04-07 00:06:39] RLPlayer_1 (defensive) has 25 points
+[2025-04-07 00:06:39] RLPlayer_2 (despot) has 23 points
+[2025-04-07 00:06:45] [Episode 36] RLPlayer_0 (balanced) won in round 6!
+[2025-04-07 00:06:45] [Episode 36] Final points:
+[2025-04-07 00:06:45] RLPlayer_0 (balanced): 69
+[2025-04-07 00:06:45] RLPlayer_1 (defensive): 38
+[2025-04-07 00:06:45] RLPlayer_2 (despot): 35
+[2025-04-07 00:06:45] Model epsilon: 0.8349
+[2025-04-07 00:06:45] Model epsilon: 0.8349
+[2025-04-07 00:06:45] Model epsilon: 0.8349
+[2025-04-07 00:06:45] Starting episode 37/500
+[2025-04-07 00:06:46] [Episode 37] Round 1
+[2025-04-07 00:06:46] RLPlayer_0 (balanced) has 0 points
+[2025-04-07 00:06:46] RLPlayer_1 (defensive) has 0 points
+[2025-04-07 00:06:46] RLPlayer_2 (despot) has 0 points
+[2025-04-07 00:06:46] [Episode 37] Round 2
+[2025-04-07 00:06:46] RLPlayer_0 (balanced) has 4 points
+[2025-04-07 00:06:46] RLPlayer_1 (defensive) has 5 points
+[2025-04-07 00:06:46] RLPlayer_2 (despot) has 4 points
+[2025-04-07 00:06:49] [Episode 37] Round 3
+[2025-04-07 00:06:49] RLPlayer_0 (balanced) has 8 points
+[2025-04-07 00:06:49] RLPlayer_1 (defensive) has 13 points
+[2025-04-07 00:06:49] RLPlayer_2 (despot) has 11 points
+[2025-04-07 00:06:51] [Episode 37] Round 4
+[2025-04-07 00:06:51] RLPlayer_0 (balanced) has 14 points
+[2025-04-07 00:06:51] RLPlayer_1 (defensive) has 27 points
+[2025-04-07 00:06:51] RLPlayer_2 (despot) has 21 points
+[2025-04-07 00:06:58] [Episode 37] Round 5
+[2025-04-07 00:06:58] RLPlayer_0 (balanced) has 22 points
+[2025-04-07 00:06:58] RLPlayer_1 (defensive) has 43 points
+[2025-04-07 00:06:58] RLPlayer_2 (despot) has 35 points
