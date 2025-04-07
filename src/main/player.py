@@ -109,8 +109,7 @@ class Player:
 
         # no decisions made in the status phase
         decision = self.model.choose_action(state=(features, adjacency, player_inputs), 
-                                            valid_actions=valid_actions)    
-        
+                                            valid_actions=valid_actions)          
         if phase == "action":
             print(f"{self.name} Action priorities: {decision}")
             return self.tactical_model(decision)
@@ -130,7 +129,7 @@ class Player:
                 return self.tactical_model(decisions)
                 
             system, ships = res
-            print(f"{self.name} attacked {system._id} with {ships}")
+            print(f"{self.name} attacked {system._id} with {[s.name for s in ships]}")
 
             return TacticalAction(self, system, ships)
 

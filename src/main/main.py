@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from simulation import Simulation
+from trainer import main
 
 if __name__ == "__main__":
         
@@ -16,10 +16,11 @@ if __name__ == "__main__":
 
     clock = pygame.time.Clock()
 
-    sim = Simulation(screen, clock)
+    #sim = Simulation(screen, clock)
 
     # main loop
-    sim.run()
+    #sim.run()
+    main()
 
     # Quit Pygame
     pygame.quit()

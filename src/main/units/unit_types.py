@@ -26,7 +26,7 @@ class Dreadnought(Ship):
                 "bombardment": (1, 5)
             }
             )
-    def bombardment(self):
+    def bombard(self):
         hits = sum([super().make_attack_roll() for i in range(1)])
         return hits
         
@@ -82,7 +82,7 @@ class WarSun(Ship):
         hits = sum([super().make_attack_roll() for i in range(3)])
         return hits
     
-    def bombardment(self):
+    def bombard(self):
         hits = sum([super().make_attack_roll() for i in range(3)])
         return hits
         

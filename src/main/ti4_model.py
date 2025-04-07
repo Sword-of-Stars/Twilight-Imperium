@@ -58,7 +58,7 @@ class TwilightImperiumRL:
         board_embedding = Lambda(lambda inputs: tf.reduce_sum(inputs[0] * inputs[1], axis=1))([x, attention_weights])
         
         # Player-specific features input
-        player_input = Input(shape=(19,), name='player_features')  # Adjust size as needed
+        player_input = Input(shape=(20,), name='player_features')  # Adjust size as needed
         
         # Combine board representation with player features
         combined = layers.Concatenate()([board_embedding, player_input])
@@ -113,7 +113,7 @@ class TwilightImperiumRL:
         """
         if np.random.rand() <= self.epsilon:
             # Exploration: random action
-            return random.choice(valid_actions)
+            return random.sample(valid_actions, len(valid_actions))
         
         # Exploitation: use model to predict best action
         node_features, adjacency, player_features = state

@@ -15,7 +15,7 @@ def compute_system_benefit(system, disposition):
 def compute_enemy_system_value(system, player):
     enemy_strength = 0
     for ship in system.space_area:
-        if ship.owner != system.owner:
+        if ship.owner != player:
             enemy_strength += player.disposition[ship.name]
     for planet in system.planets:
         if planet.owner != player:
@@ -60,7 +60,7 @@ def filter_and_simulate_battles_for_systems(player):
     return computed_win_probabilities
 
 def attack(player):
-    aggressiveness = 0.7
+    aggressiveness = player.disposition["aggression"]
     system_options = filter_and_simulate_battles_for_systems(player)
 
     # Flatten options: (system, ship_combo)
@@ -68,9 +68,6 @@ def attack(player):
     benefit_lookup = {}
     win_prob_lookup = {}
     pain_lookup = {}
-
-    if attack_options == []:
-        return "failed"
 
     for system, ship_combos in system_options.items():
         for ships in ship_combos:
@@ -87,6 +84,9 @@ def attack(player):
             benefit_lookup[(system, ship_combo_key)] = benefit_val
             win_prob_lookup[(system, ship_combo_key)] = system_options[system][ships]
             pain_lookup[(system, ship_combo_key)] = compute_enemy_system_value(system, player)
+
+    if attack_options == []:
+        return "failed"
 
     # Create model
     model = ConcreteModel()
@@ -133,27 +133,28 @@ def attack(player):
     for ship in combo:
         if ship.capacity > 0:
             source_systems.add(ship.system)
-    print(f"Source systems: {source_systems}")
+    print(f"Source systems: {", ".join([str(s._id) for s in source_systems])}")
 
     infantry_available = []
     for s in source_systems:
         infantry_available.extend([unit for unit in s.space_area if unit.name == "infantry" and unit.owner == player])
     
         for p in s.planets:
-            print(p.name)
+            #print(p.name)
             if p.owner == player:
-                print(f"-> {p.name} has {p.num_ground_forces} ground forces")
+                #print(f"-> {p.name} has {p.num_ground_forces} ground forces")
                 infantry_available.extend(p.ground_forces)
-    print(f"Available infantry: {len(infantry_available)}")
+    #print(f"Available infantry: {len(infantry_available)}")
     infantry_allocated = []
     for ship in combo:
         if ship.capacity > 0:
-            print(f"{ship.name} can carry {ship.capacity} units")
+            #print(f"{ship.name} can carry {ship.capacity} units")
             # Allocate as many infantry as the ship can carry, without exceeding available infantry
             infantry_to_load = min(ship.capacity - len(ship.in_cargo), len(infantry_available))
 
             for infantry in infantry_available[:infantry_to_load]:
-                infantry.remove_from_planet()
+                if infantry.planet != None:
+                    infantry.remove_from_planet()
             ship.in_cargo.extend(infantry_available[:infantry_to_load])
             infantry_allocated.extend(infantry_available[:infantry_to_load])
             infantry_available = infantry_available[infantry_to_load:]  # Remove allocated infantry
@@ -168,6 +169,6 @@ def attack(player):
     '''for (system, combo) in attack_options:
         if value(model.x[(system, combo)]) > 0.5:'''
     print(f"-> System: {system.coords}")
-    print(f"-> Ships: {list(combo)}")  # Convert frozenset back to list
+    print(f"-> Ships: {[s.name for s in combo]}")  # Convert frozenset back to list
 
     return system, combo  # Return the chosen system and ship combo for further processing

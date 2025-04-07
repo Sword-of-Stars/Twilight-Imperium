@@ -70,9 +70,6 @@ def reinforce(player):
     reinforce_targets = filter_reinforce_targets(player)
     reachable = reachable_ships_for_reinforcement(player)
 
-    print(f"Reinforce targets: {reinforce_targets}")
-    print(f"Reachable ships: {reachable}")
-
     if len(reachable) == 0 or len(reinforce_targets) == 0:
         return "INFEASIBLE"
 
@@ -98,8 +95,6 @@ def reinforce(player):
             reinforce_options.append(key)
             benefit_lookup[key] = vuln_score
             cost_lookup[key] = calculate_fleet_value(combo, player.disposition)
-
-    print(f"Reinforce options: {reinforce_options}")
 
     # Optimization model
     model = ConcreteModel()
@@ -129,7 +124,6 @@ def reinforce(player):
     SolverFactory('glpk').solve(model)
 
     if len(reinforce_options) == 0:
-        print("No viable reinforcements.")
         return None, None
 
     best = max(reinforce_options, key=lambda opt: value(model.x[opt]))

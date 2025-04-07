@@ -105,19 +105,14 @@ class Simulation:
         self.phase = "strategy"
         
     def take_turn(self):
-        for player in self.players:
-            if player.passed:
-                self.player_turn += 1
-                self.player_turn %= len(self.players)
-            else:
-                break
-        else:
-            # rotate over the first player
+        if sum([p.passed for p in self.players]) == len(self.players):
             self.first_player += 1
             self.first_player %= len(self.players)
-
             self.phase = "status"
-            return 
+            return
+        
+        else:
+            self.player_turn = (self.player_turn + 1) % len(self.players)
         
         
         current_player = self.players[self.player_turn]
@@ -130,8 +125,6 @@ class Simulation:
             print(r)
         self.event_log.add_event(str(res))
 
-        self.player_turn += 1
-        self.player_turn %= len(self.players)
         
     def handle_user_input(self):
         mouse_pos = pygame.mouse.get_pos()
@@ -188,23 +181,33 @@ class Simulation:
 
     def run(self):
         self.game_round = 1
-        while self.running and not self.game_over:
+        while self.running:
             self.handle_user_input()
 
-            if self.phase == "strategy":
-                print(f"[SYSTEM] ============ Round {self.game_round} ================")
+            if not self.game_over:
+                if self.phase == "strategy":
+                    print(f"[SYSTEM] ============ Round {self.game_round} ================")
+                    for player in self.players:
+                        print(f"{player.name} has {player.points} points")
+                    print("\n\n")
 
-                self.strategy_phase()
-            elif self.phase == "action":
-                self.take_turn()
-            elif self.phase == "status":
-                self.status_phase()
-                self.game_round += 1
+                    self.strategy_phase()
+                elif self.phase == "action":
+                    self.take_turn()
+                elif self.phase == "status":
+                    self.status_phase()
+                    self.game_round += 1
 
-            for player in self.players:
-                if player.points >= 50:
-                    print("Yahjoo!")
+                victors = [p for p in self.players if p.points >= 50]
+                if victors != []:
+                    victor = max(victors, key=lambda x: x.points)
+                    print(f"{victor.name} won the game!")
                     self.game_over = True
+
+                    print(f"[SYSTEM] ============ GAME OVER (Round {self.game_round}) ================")
+                    for player in self.players:
+                        print(f"{player.name} has {player.points} points")
+                    print("\n\n")
             
             self.update()
 

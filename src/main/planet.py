@@ -45,6 +45,11 @@ class Planet():
         self.num_ground_forces -= 1
         self.ground_forces = [x for x in self.ground_forces if x != infantry]
 
+    def remove_n_ground_forces(self, n):
+        self.num_ground_forces = max(0, self.num_ground_forces-1)
+        for i in range(min(n, self.num_ground_forces)):
+            self.ground_forces.pop()
+
     def get_encoding(self):
         """
         Encodes the planet's state as a feature vector.

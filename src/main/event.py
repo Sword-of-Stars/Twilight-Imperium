@@ -2,6 +2,7 @@ from combat_sim import simulate_space_combat
 from production import produce
 
 from units.ground_forces import GroundForce
+from units.unit_types import Fighter, Destroyer, Cruiser, Carrier, Dreadnought, WarSun
 
 class Event():
     def __init__(self, player):
@@ -85,14 +86,15 @@ class SpaceCombat():
 
         self.winner, fleet_1, fleet_2 = simulate_space_combat(fleet_1, fleet_2)
 
-        for ship in self.active_system.space_area:
+
+        '''for ship in self.active_system.space_area:
             if ship not in fleet_1 and ship not in fleet_2:
-                ship.destroy()
+                ship.destroy()'''
 
     def __str__(self):
         if self.winner == None:
             return f"[SPACE COMBAT] {self.player.name} skipped the space combat step"
-        return f"[SPACE COMBAT] {self.winner} won the space combat in {str(self.active_system._id)}"
+        return f"[SPACE COMBAT] {self.player.name} {'won' if self.winner == 1 else "lost"} the space combat in {str(self.active_system._id)}"
     
 class Invasion():
     def __init__(self, active_system, player):
@@ -118,7 +120,8 @@ class Invasion():
             for planet in planets:
                 if planet.owner != self.player:
                     if planet.num_ground_forces > 0 and ((planet.num_pds == 0) or (planet.num_pds > 0 and bombardment.name == "warsun")): # only bombard if there are ground forces
-                        bombardment.bombard(planet)
+                        hits = bombardment.bombard()
+                        planet.remove_n_ground_forces(hits)
                         break
 
         # invade the planets
@@ -178,19 +181,54 @@ class Production():
         self.produced = []
 
     def execute(self):
-        units, planets_exhausted = produce(self.player, self.active_system)
-        for planet in planets_exhausted:
-            planet.exhaust()
-        for unit, num in units.items():
-            if unit == "infantry":
-                for planet in self.active_system.planets:
-                    if planet.has_space_dock:
-                        for i in range(int(num)):
-                            planet.place_ground_forces(GroundForce())
+        for planet in self.active_system.planets:
+            if not planet.has_space_dock:
+                break
+        else:
+            units, planets_exhausted = produce(self.player, self.active_system)
+            for planet in planets_exhausted:
+                planet.exhaust()
 
-        
+            def create_and_place(ship):
+                x = ship(system=self.active_system)
+                x.set_ownership(self.player)
+                self.player.ships.append(x)
+                x.move_to_system(self.active_system)
 
-        self.produced = units
+            for unit, num in units.items():
+                if num == None:
+                    continue
+                if unit == "infantry":
+                    for planet in self.active_system.planets:
+                        if planet.has_space_dock:
+                            for i in range(int(num)):
+                                x = GroundForce()
+                                x.move_to_planet(planet)
+
+                elif unit == "fighter":
+                    for ship in self.active_system.space_area:
+                        if ship.capacity - len(ship.in_cargo) > 0:
+                            if num > 0:
+                                x = Fighter()
+                                x.move_to_system(ship)
+                                num -= 1
+                elif unit == "destroyer":
+                    create_and_place(Destroyer)
+                elif unit == "cruiser":
+                    create_and_place(Cruiser)
+                elif unit == "carrier":
+                    create_and_place(Carrier)
+                elif unit == "dreadnought":
+                    create_and_place(Dreadnought)
+                elif unit == "warsun":
+                    create_and_place(WarSun)
+                else:
+                    print(f"Reject: {unit}")
+
+
+            
+
+            self.produced = units
 
     def __str__(self):
         return f"[PRODUCTION] {self.player.name} produced the following units: {self.produced}"

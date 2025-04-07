@@ -1,4 +1,4 @@
-import copy
+from copy import deepcopy
 import random
 
 def assign_hits(fleet, hits):
@@ -41,8 +41,8 @@ def simulate_space_combat(fleet_1, fleet_2, debug=False):
     Returns: winner (1 for player 1, -1 for player 2, 0 for draw),
              remaining ships for player 1, remaining ships for player 2
     """
-    fleet_1 = copy.deepcopy(fleet_1)
-    fleet_2 = copy.deepcopy(fleet_2)
+    fleet_1 = deepcopy(fleet_1)
+    fleet_2 = deepcopy(fleet_2)
     
     combat_round = 0
     while fleet_1 and fleet_2:

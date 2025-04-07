@@ -1,4 +1,5 @@
 from random import randint
+import copy
 
 class Ship():
     """
@@ -22,7 +23,7 @@ class Ship():
         self.owner = owner
         self.health = self.MAXHEALTH
         self.in_cargo = []
-        self.system = kwargs["system"]
+        self.system = kwargs.get("system", None)
 
     def set_ownership(self, owner):
         self.owner = owner
@@ -86,6 +87,24 @@ class Ship():
             return self.system.neighbors
         elif self.move == 2:
             return list(set([tile for tile in self.system.neighbors]))
+        
+    def __deepcopy__(self, memo):
+        # Create a new Ship with the same properties, skipping deepcopy of 'owner'
+        copied = Ship(
+            name=self.name,
+            combat=self.combat,
+            move=self.move,
+            capacity=self.capacity,
+            cost=self.cost,
+            special_combat=self.special_combat,
+            special=self.special,
+            sustain=(self.MAXHEALTH == 2),
+        )
+        copied.health = self.health
+        copied.in_cargo = ["fighter" for f in self.in_cargo if f.name == "fighter"]
+        memo[id(self)] = copied
+        return copied
+
 
     def __str__(self):
         msg = f"[{self.owner.name}] {self.name} "

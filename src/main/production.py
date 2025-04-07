@@ -46,7 +46,7 @@ def produce(player, system):
     model.fighter_capacity_constraint = pyo.Constraint(expr=model.x["fighter"] <= fighter_capacity + vacant_capacity)
 
     # Constraint: Maximum number of total units produced
-    max_units = sum([planet.has_space_dock * (planet.resources + 3) for planet in player.planets])  # Example maximum unit count
+    max_units = sum([planet.has_space_dock * (planet.resources + 3) for planet in system.planets])  # Example maximum unit count
     model.max_units_constraint = pyo.Constraint(expr=sum(model.x[u] for u in unit_names) <= max_units)
 
     # Define resource waste variable
@@ -65,6 +65,13 @@ def produce(player, system):
         expr=model.influence_waste == sum(influence[p] * model.e[p] for p in planet_names)
     )
 
+    # New Constraint: Limit non-fighter, non-infantry ships based on fleet supply
+    non_fighter_units = [u.name for u in units if not isinstance(u, Fighter) and not isinstance(u, GroundForce)]
+    existing_non_fighter_ships = sum(1 for ship in system.space_area if ship.owner == player and ship.name in non_fighter_units)
+    model.fleet_supply_constraint = pyo.Constraint(
+        expr=sum(model.x[u] for u in non_fighter_units) + existing_non_fighter_ships <= player.command_counters["fleet"]
+    )
+
     # Objective: Maximize combat effectiveness - penalties for resource and influence waste
     waste_penalty = player.disposition["resource wastefulness"]  # Adjust to balance combat power vs. minimizing resource waste
     influence_penalty = (1-waste_penalty)  # Penalty for wasting influence
@@ -80,20 +87,12 @@ def produce(player, system):
     solver.solve(model)
 
     # Display results
-    #print("Optimal unit production:")
-    ''' for u in unit_names:
-        print(f"{u}: {model.x[u]()} units")'''
     units_produced = {u: model.x[u]() for u in unit_names}
 
-    #print("\nExhausted planets:")
     exhausted_planets = []
     for p in planet_names:
         if model.e[p]() == 1:
-            #print(f"{p} (resources: {resources[p]}, influence: {influence[p]})")
             exhausted_planets.append(p)
     exhausted_planets = [p for p in player.planets if p.name in exhausted_planets]
-
-    #print(f"\nWasted resources: {model.resource_waste()}")
-    #print(f"Wasted influence: {model.influence_waste()}")
 
     return units_produced, exhausted_planets
